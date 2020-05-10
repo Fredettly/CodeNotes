@@ -1,0 +1,65 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fred.blog.codenotes.mapper.BlogMapper">
+    <resultMap type="com.fred.blog.codenotes.dto.BlogDTO" id="blogdtomap">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+        <result column="view_count" property="viewCount"/>
+        <result column="comment_count" property="commentCount"/>
+        <result column="tag" property="tag"/>
+    </resultMap>
+    <resultMap type="com.fred.blog.codenotes.model.Blog" id="blogmap">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+        <result column="view_count" property="viewCount"/>
+        <result column="comment_count" property="commentCount"/>
+        <result column="tag" property="tag"/>
+    </resultMap>
+    <!--查询所有博客-->
+    <select id="findAllBlog" resultMap="blogdtomap">
+		select * from blog
+	</select>
+
+    <!--根据标签查询博客-->
+    <select id="findByTag" resultMap="blogdtomap">
+        select * from blog where tag = #{tag}
+    </select>
+
+    <!--根据id查询博客-->
+    <select id="getById" resultMap="blogmap">
+        select * from blog where id = #{id}
+    </select>
+
+    <!--根据id删除博客-->
+    <delete id="deleteBlogById" >
+        delete from blog where id = #{id}
+    </delete>
+
+    <!--新增博客-->
+    <insert id="saveBlog" >
+        insert into blog (title, content, tag, gmt_create, gmt_modified, creator) values (#{title},#{content},#{tag},#{gmtCreate},#{gmtModified},#{creator})
+    </insert>
+
+    <!--更新博客-->
+    <update id="updateBlog">
+        update blog set title=#{title},content=#{content},tag=#{tag},gmt_modified=#{gmtModified} where id=#{id}
+    </update>
+    
+    <!--阅读数-->
+    <update id="incView">
+        update blog set view_count = view_count + #{viewCount} where id = #{id}
+    </update>
+
+    <!--留言数-->
+    <update id="incCommentCount">
+        update blog set comment_count = comment_count + #{commentCount} where id = #{id}
+    </update>
+</mapper>

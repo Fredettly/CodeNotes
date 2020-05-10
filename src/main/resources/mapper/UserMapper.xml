@@ -1,0 +1,55 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fred.blog.codenotes.mapper.UserMapper">
+    <resultMap type="com.fred.blog.codenotes.model.User" id="usermap">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+    </resultMap>
+    <resultMap type="com.fred.blog.codenotes.dto.GithubUser" id="githubusermap">
+        <id column="id" property="id"/>
+        <result column="account_id" property="accountId"/>
+        <result column="name" property="name"/>
+        <result column="token" property="token"/>
+        <result column="avatar_url" property="avatarUrl"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+    </resultMap>
+
+    <!--登录验证-->
+    <select id="findByUsernameAndPassword" resultMap="usermap">
+		select * from admin where username = #{username} and password = #{password};
+	</select>
+
+    <!--根据id查询-->
+    <select id="findById" resultMap="usermap">
+        select * from admin where id = #{uid}
+    </select>
+
+    <!--插入GithubUser-->
+    <insert id="insert">
+        insert into github_user (id,name,token,avatar_url,gmt_create,gmt_modified) values (#{id},#{name},#{token},#{avatarUrl},#{gmtCreate},#{gmtModified})
+    </insert>
+
+    <!--更新GitHubUser-->
+    <update id="updateGithubUser">
+        update github_user set id=#{id},account_id=#{accountId},name=#{name},token=#{token},avatar_url=#{avatarUrl},gmt_create=#{gmtCreate},gmt_modified=#{gmtModified}
+    </update>
+
+    <!--根据accountId查githubUser-->
+    <select id="findGithubByAccountId" resultMap="githubusermap">
+        select * from github_user where account_id=#{accountId}
+    </select>
+
+    <!--根据id查githubUser-->
+    <select id="findGithubById" resultMap="githubusermap">
+        select * from github_user where id=#{id}
+    </select>
+
+    <!--根据token查githubUser-->
+    <select id="findByToken" resultMap="githubusermap">
+        select * from github_user where token=#{token}
+    </select>
+</mapper>

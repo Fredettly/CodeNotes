@@ -1,0 +1,354 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CodeNotes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.css">
+    <link rel="stylesheet" href="/css/me.css">
+</head>
+<body>
+<!--导航-->
+<nav class="ui inverted attached segment m-padding-tb-mini">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui orange header item">Fred's</h2>
+            <a href="#" class="m-item item m-mobile-hide"><i class="home icon "></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+            <div class="right menu">
+                <div class="ui dropdown item">
+                    <div class="text" th:if="${session.user == null}">
+                        <a title="使用Github登录"
+                           href="https://github.com/login/oauth/authorize?client_id=7768e7e66f0af96f2ca4&redirect_uri=http://localhost:8080/callback&scope=user&state=1">
+                            <img class="ui avatar image" src="/img/github.jfif">
+                        </a>
+                    </div>
+                    <div class="text" th:if="${session.user != null}">
+                        <img class="ui avatar image" th:src="${session.user.avatarUrl}">
+                        <span th:text="${session.user.name}"></span>
+                    </div>
+                    <div class="menu" th:if="${session.user != null}">
+                        <i class="dropdown icon"></i>
+                        <a href="/logout" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui lists black menu icon button m-right-top m-mobile-show">
+        <i class="bars icon"></i>
+    </a>
+
+</nav>
+<div id="jumu" class="ui inverted attached vertical masthead center aligned segment" style="min-height: 700px;
+background-image : url('/img/cover1.jpg');">
+
+    <div class="ui container">
+    </div>
+    <div class="ui text container">
+        <h1 class="ui inverted header" style="margin-top: 3em;
+    margin-bottom: 0em;
+    font-size: 4em;
+    font-weight: normal;">
+            Young For You
+        </h1>
+        <h2>Do whatever you want when you want to.</h2>
+        <a class="ui huge primary button" href="https://xwx_233.gitee.io/">Get Started <i class="right arrow icon"></i></a>
+    </div>
+
+</div>
+<!--中间内容-->
+<div class="m-container top m-padding-tb-big ">
+    <div class="ui container">
+        <div class="ui stackable grid">
+            <!--博客内容-->
+            <div class="eleven wide column">
+                <!--header-->
+                <div class="ui top segment">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <h3 class="ui header m-black"><i class="quote left icon"></i> 博客</h3>
+                        </div>
+                        <div class="right aligned  column">
+                            共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${list.total}">
+                            14 </h2> 篇
+                        </div>
+                    </div>
+                </div>
+                <!--content-->
+                <div class="ui segment rounded m-margin-bottom" th:each="list : ${list.list}">
+                    <div class="ui padded vertical segment">
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <a th:href="@{/blog/{id}(id=${list.id})}">
+                                    <h1 class="ui header m-black" th:data-value="${list.id}" th:text="${list.title}">
+                                        罗志祥的时间管理，为什么你学不会？</h1>
+                                </a>
+                                <div class="ui basic segment">
+                                    <p class="ui basic orange label" th:text="${list.tag}">
+                                        今天有个朋友跟我开玩笑，你看罗志祥比你们忙那么多，还能「多人运动」，结果你们连打个游戏都要...</p>
+                                </div>
+                                <div class="ui grid">
+                                    <div class="ui  horizontal link list">
+                                        <div class="item">
+                                            <img th:src="${list.avatar}"
+                                                 class="ui avatar image">
+                                            <div class="content"><a href="#" class="header m-text-thin"
+                                                                    th:text="${list.username}">飞翔的翔</a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <span class="text-desc"><span th:text="${list.commentCount}"></span> 个留言  ·  <span
+                                                    th:text="${list.viewCount}"></span>次浏览  ·  <span
+                                                    class="time" th:datetime="${list.gmtModified}"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="four wide column">
+                                <a href="#" target="_blank">
+                                    <img th:src="${list.avatar}" class="ui rounded image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--footer-->
+                <tr>
+                    <th colspan="5">
+                        <div class="ui right floated pagination menu" th:each="p : ${list}">
+                            <a class="icon item" th:if="${p.hasPreviousPage}" th:href="@{/(pageNum=${p.prePage})}">
+                                <i class="left chevron icon"></i>
+                            </a>
+                            <a class="item" th:href="@{/(pageNum=${pages})}" th:each="pages : ${list.navigatepageNums}"
+                               th:text="${pages}">1</a>
+                            <a class="icon item" th:if="${p.hasNextPage}" th:href="@{/(pageNum=${p.nextPage})}">
+                                <i class="right chevron icon"></i>
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+            </div>
+            <!--右边top-->
+            <div class="five wide column">
+                <!--分类-->
+                <!--<div class="ui segment">
+                    <div class="ui secondary segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="idea icon"></i> 分类
+                            </div>
+                            <div class="right aligned column">
+                                <a href="#" target="_blank">more <i class="angle double right icon"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div class="ui attached fluid vertical menu">
+                            <a href="#" class="item">
+                                学习日志
+                                <div class="ui label">1</div>
+                            </a>
+                        </div>
+                        <div class="ui attached fluid vertical menu">
+                            <a href="#" class="item">
+                                学习日志
+                                <div class="ui label">1</div>
+                            </a>
+                        </div>
+                        <div class="ui attached fluid vertical menu">
+                            <a href="#" class="item">
+                                学习日志
+                                <div class="ui label">1</div>
+                            </a>
+                        </div>
+                        <div class="ui attached fluid vertical menu">
+                            <a href="#" class="item">
+                                学习日志
+                                <div class="ui label">1</div>
+                            </a>
+                        </div>
+                        <div class="ui attached fluid vertical menu">
+                            <a href="#" class="item">
+                                学习日志
+                                <div class="ui label">1</div>
+                            </a>
+                        </div>
+                        <div class="ui attached fluid vertical menu">
+                            <a href="#" class="item">
+                                学习日志
+                                <div class="ui label">1</div>
+                            </a>
+                        </div>
+                        <div class="ui attached fluid vertical menu">
+                            <a href="#" class="item">
+                                学习日志
+                                <div class="ui label">1</div>
+                            </a>
+                        </div>
+                        <div class="ui attached fluid vertical menu">
+                            <a href="#" class="item">
+                                学习日志
+                                <div class="ui label">1</div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>-->
+                <div class="ui card">
+                    <div class="image">
+                        <img src="/img/avatar.png">
+                    </div>
+                    <div class="content">
+                        <a class="header">xwx_</a>
+                        <div class="meta">
+                            <span class="date">2020</span>
+                        </div>
+                        <div class="description">唯有热爱和时间不可辜负</div>
+                    </div>
+                    <div class="extra content">
+                        <div class="ui statistics">
+                            <div class="statistic">
+                                <div class="value" th:text="${list.total}">
+                                    5,550
+                                </div>
+                                <div class="label">博客</div>
+                            </div>
+                            <div class="statistic">
+                                <div class="value" th:text="${tag.total}">
+                                    5,550
+                                </div>
+                                <div class="label">标签</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--标签-->
+                <div class="ui segment m-margin-top">
+                    <div class="ui secondary segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="tags icon"></i> 标签
+                            </div>
+                            <div class="right aligned column">
+                                <a href="#" target="_blank">more <i class="angle double right icon"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <a href="href" target="_blank" th:each="tag : ${tag.list}" th:text="${tag.name}"
+                           class="ui basic orange label m-margin-tiny m-text-thin"></a>
+                    </div>
+                </div>
+                <!--最新推荐-->
+                <div class="ui segment m-margin-top">
+                    <div class="ui secondary segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="bookmark icon"></i> 最新推荐
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui segment attached">
+                        <a href="#" target="_blank" class="m-black m-text-thin">用户故事(User Story)</a>
+                    </div>
+                    <div class="ui segment attached">
+                        <a href="#" target="_blank" class="m-black m-text-thin">用户故事(User Story)</a>
+                    </div>
+                    <div class="ui segment attached">
+                        <a href="#" target="_blank" class="m-black m-text-thin">用户故事(User Story)</a>
+                    </div>
+                    <div class="ui segment attached">
+                        <a href="#" target="_blank" class="m-black m-text-thin">用户故事(User Story)</a>
+                    </div>
+                </div>
+                <!--二维码-->
+                <h4 class="ui horizontal divider header m-margin-top">我的hexo blog</h4>
+                <div class="ui centered card m-margin-top" style="width: 11em;">
+                    <a href="https://xwx_233.gitee.io/" title="点击访问我的hexo博客">
+                        <img src="/img/hexo.png" class="ui rounded image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--页尾-->
+<footer class="ui bottom inverted vertical segment m-padding-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="/img/wechat.jpg" title="WeChat" class="ui rounded image" width="100px">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email : 794760487@qq.com</a>
+                    <a href="#" class="item">QQ : 794760487</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">这是基于spring boot搭建的个人博客,欢迎大家互相交流，相互学习。</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2020 Fred's Power by xwx</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.js"></script>
+<script src="https://cdn.bootcss.com/timeago.js/3.0.2/timeago.js"></script>
+<script>
+    $('.lists').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    $('.ui.dropdown').dropdown({
+        on: 'hover'
+    });
+    var timeagoInstance = timeago();
+    timeagoInstance.render(document.querySelectorAll('.time'), 'zh_CN');
+</script>
+</body>
+</html>

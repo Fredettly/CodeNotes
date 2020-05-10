@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MySpringBoot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.css">
+    <link rel="stylesheet" href="/css/error.css">
+</head>
+<body>
+<div class="ui container">
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="ui basic segment">
+            <div class="ui huge header" style="font-size:4em">出 错 了 ！</div>
+            <br>
+            <div class="ui huge header" style="font-size:2em!important">
+                        <p th:text="${message}">Back To Index</p>
+            </div>
+            <p><a class="ui green right floated button" href="/" >回到主页</a></p>
+            </div>
+</div>
+<div class="ui basic segment">
+       <img src="/img/errorp.png" class="m-position"></img>
+</div>
+</body>
+</html>

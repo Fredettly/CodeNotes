@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://8.129.167.17:3306/blog?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 12345678
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+logging:
+  level:
+    root: warn
+    com.fred.blog.codenotes: info
+  file:
+    path: log/blog-pro.log
+    max-size: 10MB
+    max-history: 7
+
+server:
+  port: 80

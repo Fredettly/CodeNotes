@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${blog.title}+' - CodeNotes'"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.css">
+    <link rel="stylesheet" href="/editormd/css/editormd.css">
+    <link rel="stylesheet" href="/css/me.css">
+    <script src="/editormd/editormd.js"></script>
+    <script src="/editormd/lib/marked.min.js"></script>
+    <script src="/editormd/lib/prettify.min.js"></script>
+</head>
+<body>
+
+<!--导航-->
+<nav class="ui inverted attached segment m-padding-tb-mini">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui orange header item">Fred's</h2>
+            <a href="/" class="m-item item m-mobile-hide"><i class="home icon "></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+            <div class="right menu">
+                <div class="ui dropdown item">
+                    <div class="text" th:if="${session.user == null}">
+                        <img class="ui avatar image" src="/img/github.jfif">
+                        <a title="使用Github登录"
+                           href="https://github.com/login/oauth/authorize?client_id=7768e7e66f0af96f2ca4&redirect_uri=http://localhost:8080/callback&scope=user&state=1">
+                            <span>登录</span>
+                        </a>
+                    </div>
+                    <div class="text" th:if="${session.user != null}">
+                        <img class="ui avatar image" th:src="${session.user.avatarUrl}">
+                        <span th:text="${session.user.name}"></span>
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu" th:if="${session.user != null}">
+                        <a href="/logout" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui lists black menu icon button m-right-top m-mobile-show">
+        <i class="bars icon"></i>
+    </a>
+</nav>
+
+<!--中间内容-->
+<div class="m-container-small m-padding-tb-big">
+    <div class="ui container">
+        <!--作者信息-->
+        <!--文章图片-->
+        <!--        <div class="ui attached segment">
+                    <img src="https://picsum.photos/id/1056/800/450" class="ui fluid rounded image">
+                </div>-->
+        <!--文章内容-->
+        <div class="ui padded segment">
+            <div class="ui center aligned basic segment">
+                <h1 th:text="${blog.title}"></h1>
+            </div>
+            <div class="ui basic segment">
+                <div class="ui right floated horizontal link list">
+                    <div class="item">
+                        <span>
+                        <i class="user icon"></i>
+                        <span th:text="${blog.username}"></span>
+                        <i class="clock icon"></i>
+                        <span th:text="${#dates.format(blog.gmtCreate,'yyyy-MM-dd HH:mm')}"></span>
+                        <i class="eye icon"></i>
+                        <span th:text="${blog.viewCount}"></span>
+                            </span>
+                    </div>
+                </div>
+            </div>
+            <div class="m-container" id="blog-content">
+                <textarea style="display: none;" th:text="${blog.content}"></textarea>
+            </div>
+            <!--标签-->
+            <div class="ui basic segment">
+                <div class="ui orange basic label" th:text="${blog.tag}">MySQL</div>
+            </div>
+            <div class="ui center aligned basic segment">
+                <button id="paybutton" class="ui red basic circular button">赞赏</button>
+            </div>
+            <div class="ui payQ flowing popup transition hidden">
+                <div class="ui orange basic label">
+                    <div class="ui images">
+                        <div class="image">
+                            <img src="/img/wcpay.png" class="ui rounded bordered image" style="width: 300px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--留言区域-->
+        <div class="ui attached segment comments">
+            <div class="ui m-container">
+                <h1 class="ui header"><span th:text="${blog.commentCount}"></span> 留言</h1>
+                <div class="comment" th:each="c:${comment.list}">
+                    <a class="avatar">
+                        <img th:src="${c.githubUser.avatarUrl}">
+                    </a>
+                    <div class="content">
+                        <a class="author" th:text="${c.githubUser.name}">Matt</a>
+                        <div class="metadata">
+                            <span class="date" th:text="${#dates.format(c.gmtCreate,'yyyy-MM-dd')}">今天下午 5:42</span>
+                        </div>
+                        <div class="text" th:text="${c.content}">太赞了！</div>
+                        <div class="actions">
+                            <a class="reply">Reply</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="ui basic segment">
+                <div class="ui ten doubling cards">
+                    <div class="card">
+                        <div class="image">
+                            <img th:src="${session.user != null ? session.user.avatarUrl : '/img/GitHub.png'}">
+                        </div>
+                    </div>
+                    <h3 th:text="${session.user != null ? session.user.name : '匿名用户'}"></h3>
+                </div>
+            </div>
+            <div class="ui m-container" id="comment-section">
+                <form class="ui reply form">
+                    <div class="field">
+                        <input type="hidden" id="blog_id" th:value="${blog.id}">
+                        <textarea id="comment_content" placeholder="说点什么吧...."></textarea>
+                    </div>
+                    <button class="ui right floated orange labeled submit icon button" onclick="post()"><i
+                            class="icon edit"></i>分享看法
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!--页尾-->
+<footer class="ui bottom inverted vertical segment m-padding-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="/img/wechat.jpg" title="WeChat" class="ui rounded image" width="100px">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email : 794760487@qq.com</a>
+                    <a href="#" class="item">QQ : 794760487</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">这是基于spring boot搭建的个人博客,欢迎大家互相交流，相互学习。</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2020 Fred's Power by xwx</p>
+    </div>
+</footer>
+<!--js-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.js"></script>
+<script src="/editormd/editormd.min.js"></script>
+<script src="/js/me.js"></script>
+
+</body>
+</html>

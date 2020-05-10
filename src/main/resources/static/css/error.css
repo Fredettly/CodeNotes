@@ -1,0 +1,9 @@
+body {
+    background: url("../img/food.png");
+}
+
+.m-position {
+    position: absolute;
+    right: 30em ;
+    top: 0 ;
+}

@@ -1,0 +1,89 @@
+2020-04-28 20:16:35.544  INFO 17448 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication on DESKTOP-ST4N7N4 with PID 17448 (C:\Project\JavaProject\codenotes\target\classes started by xwx_ in C:\Project\JavaProject\codenotes)
+2020-04-28 20:16:35.594  INFO 17448 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: pro
+2020-04-28 20:16:45.305  WARN 17448 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-28 20:16:46.379  INFO 17448 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Started CodenotesApplication in 12.716 seconds (JVM running for 15.318)
+2020-04-28 20:17:00.193  INFO 17448 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.HelloController.class com.fred.blog.codenotes.controller.admin.HelloController', args=[]}
+2020-04-28 20:17:00.201  INFO 17448 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:17:00.211  INFO 17448 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : result : index
+2020-04-28 20:17:00.659  WARN 17448 --- [http-nio-8081-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:17:00.939  WARN 17448 --- [http-nio-8081-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /img/wechat.jpg
+2020-04-28 20:17:00.949  WARN 17448 --- [http-nio-8081-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /img/wechat.png
+2020-04-28 20:18:35.782  INFO 17448 --- [http-nio-8081-exec-7] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.HelloController.class com.fred.blog.codenotes.controller.admin.HelloController', args=[]}
+2020-04-28 20:18:35.782  INFO 17448 --- [http-nio-8081-exec-7] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:18:35.782  INFO 17448 --- [http-nio-8081-exec-7] c.fred.blog.codenotes.aspect.LogAspect   : result : index
+2020-04-28 20:18:35.866  WARN 17448 --- [http-nio-8081-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:18:35.882  WARN 17448 --- [http-nio-8081-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /img/wechat.jpg
+2020-04-28 20:18:35.882  WARN 17448 --- [http-nio-8081-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /img/wechat.png
+2020-04-28 20:18:36.775  WARN 17448 --- [http-nio-8081-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2020-04-28 20:18:41.901  INFO 17448 --- [http-nio-8081-exec-3] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/admin', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.LoginController.class com.fred.blog.codenotes.controller.admin.LoginController', args=[]}
+2020-04-28 20:18:41.923  INFO 17448 --- [http-nio-8081-exec-3] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:18:41.923  INFO 17448 --- [http-nio-8081-exec-3] c.fred.blog.codenotes.aspect.LogAspect   : result : /admin/login
+2020-04-28 20:18:42.224  WARN 17448 --- [http-nio-8081-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:18:42.521  WARN 17448 --- [http-nio-8081-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2020-04-28 20:18:49.374  WARN 17448 --- [http-nio-8081-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /admin/blog
+2020-04-28 20:18:49.543  WARN 17448 --- [http-nio-8081-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2020-04-28 20:18:58.111  WARN 17448 --- [http-nio-8081-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /admin/index
+2020-04-28 20:19:32.183  INFO 17448 --- [http-nio-8081-exec-9] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/admin', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.LoginController.class com.fred.blog.codenotes.controller.admin.LoginController', args=[]}
+2020-04-28 20:19:32.183  INFO 17448 --- [http-nio-8081-exec-9] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:19:32.183  INFO 17448 --- [http-nio-8081-exec-9] c.fred.blog.codenotes.aspect.LogAspect   : result : /admin/login
+2020-04-28 20:19:32.267  WARN 17448 --- [http-nio-8081-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:19:32.596  WARN 17448 --- [http-nio-8081-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2020-04-28 20:19:38.950  INFO 17448 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/admin/login', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.LoginController.class com.fred.blog.codenotes.controller.admin.LoginController', args=[admin, 123, org.apache.catalina.session.StandardSessionFacade@1eb89f6, {}]}
+2020-04-28 20:19:39.298  INFO 17448 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:19:39.298  INFO 17448 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : result : redirect:/admin
+2020-04-28 20:19:39.383  INFO 17448 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/admin;jsessionid=EF61488376520077A88FE4ED665E117C', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.LoginController.class com.fred.blog.codenotes.controller.admin.LoginController', args=[]}
+2020-04-28 20:19:39.383  INFO 17448 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:19:39.383  INFO 17448 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : result : /admin/login
+2020-04-28 20:19:39.533  WARN 17448 --- [http-nio-8081-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:19:39.811  WARN 17448 --- [http-nio-8081-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2020-04-28 20:19:50.015  INFO 17448 --- [http-nio-8081-exec-4] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/admin/login', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.LoginController.class com.fred.blog.codenotes.controller.admin.LoginController', args=[admin, 123456, org.apache.catalina.session.StandardSessionFacade@1eb89f6, {}]}
+2020-04-28 20:19:50.069  INFO 17448 --- [http-nio-8081-exec-4] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:19:50.069  INFO 17448 --- [http-nio-8081-exec-4] c.fred.blog.codenotes.aspect.LogAspect   : result : /admin/index
+2020-04-28 20:19:50.216  WARN 17448 --- [http-nio-8081-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:19:50.524  WARN 17448 --- [http-nio-8081-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2020-04-28 20:30:21.162  INFO 12472 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication on DESKTOP-ST4N7N4 with PID 12472 (C:\Project\JavaProject\codenotes\target\classes started by xwx_ in C:\Project\JavaProject\codenotes)
+2020-04-28 20:30:21.162  INFO 12472 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: pro
+2020-04-28 20:30:28.495  WARN 12472 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-28 20:30:29.250  INFO 12472 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Started CodenotesApplication in 9.576 seconds (JVM running for 11.657)
+2020-04-28 20:30:38.793  INFO 12472 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/', ip='127.0.0.1', classMethod='class com.fred.blog.codenotes.controller.admin.HelloController.class com.fred.blog.codenotes.controller.admin.HelloController', args=[]}
+2020-04-28 20:30:38.815  INFO 12472 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:30:38.815  INFO 12472 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : result : index
+2020-04-28 20:30:39.294  WARN 12472 --- [http-nio-8081-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:30:39.599  WARN 12472 --- [http-nio-8081-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /img/wechat.jpg
+2020-04-28 20:30:39.601  WARN 12472 --- [http-nio-8081-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /img/wechat.png
+2020-04-28 20:30:40.070  WARN 12472 --- [http-nio-8081-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2020-04-28 20:31:08.785  WARN 12472 --- [http-nio-8081-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /login
+2020-04-28 20:31:13.772  INFO 12472 --- [http-nio-8081-exec-7] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/admin', ip='127.0.0.1', classMethod='class com.fred.blog.codenotes.controller.admin.LoginController.class com.fred.blog.codenotes.controller.admin.LoginController', args=[]}
+2020-04-28 20:31:13.772  INFO 12472 --- [http-nio-8081-exec-7] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:31:13.772  INFO 12472 --- [http-nio-8081-exec-7] c.fred.blog.codenotes.aspect.LogAspect   : result : /admin/login
+2020-04-28 20:31:14.135  WARN 12472 --- [http-nio-8081-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:31:41.066  INFO 12472 --- [http-nio-8081-exec-9] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/admin', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.LoginController.class com.fred.blog.codenotes.controller.admin.LoginController', args=[]}
+2020-04-28 20:31:41.066  INFO 12472 --- [http-nio-8081-exec-9] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:31:41.066  INFO 12472 --- [http-nio-8081-exec-9] c.fred.blog.codenotes.aspect.LogAspect   : result : /admin/login
+2020-04-28 20:31:41.135  WARN 12472 --- [http-nio-8081-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:31:45.799  INFO 12472 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/admin', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.LoginController.class com.fred.blog.codenotes.controller.admin.LoginController', args=[]}
+2020-04-28 20:31:45.799  INFO 12472 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:31:45.799  INFO 12472 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : result : /admin/login
+2020-04-28 20:31:45.831  WARN 12472 --- [http-nio-8081-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:31:47.551  INFO 12472 --- [http-nio-8081-exec-2] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/admin', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.LoginController.class com.fred.blog.codenotes.controller.admin.LoginController', args=[]}
+2020-04-28 20:31:47.551  INFO 12472 --- [http-nio-8081-exec-2] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:31:47.551  INFO 12472 --- [http-nio-8081-exec-2] c.fred.blog.codenotes.aspect.LogAspect   : result : /admin/login
+2020-04-28 20:31:47.582  WARN 12472 --- [http-nio-8081-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:47:51.897  INFO 15868 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication on DESKTOP-ST4N7N4 with PID 15868 (C:\Project\JavaProject\codenotes\target\classes started by xwx_ in C:\Project\JavaProject\codenotes)
+2020-04-28 20:47:51.897  INFO 15868 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: pro
+2020-04-28 20:47:59.293  WARN 15868 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-28 20:48:00.058  INFO 15868 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Started CodenotesApplication in 9.317 seconds (JVM running for 10.154)
+2020-04-28 20:48:43.523  INFO 15868 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/admin', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.LoginController.class com.fred.blog.codenotes.controller.admin.LoginController', args=[]}
+2020-04-28 20:48:43.539  INFO 15868 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:48:43.539  INFO 15868 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : result : /admin/login
+2020-04-28 20:48:44.173  WARN 15868 --- [http-nio-8081-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:55:16.753  INFO 21160 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication on DESKTOP-ST4N7N4 with PID 21160 (C:\Project\JavaProject\codenotes\target\classes started by xwx_ in C:\Project\JavaProject\codenotes)
+2020-04-28 20:55:16.753  INFO 21160 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: pro
+2020-04-28 20:55:23.707  WARN 21160 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-28 20:55:24.394  INFO 21160 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Started CodenotesApplication in 9.306 seconds (JVM running for 11.286)
+2020-04-28 20:55:58.918  INFO 21160 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : Request : {url='http://localhost:8081/', ip='0:0:0:0:0:0:0:1', classMethod='class com.fred.blog.codenotes.controller.admin.HelloController.class com.fred.blog.codenotes.controller.admin.HelloController', args=[]}
+2020-04-28 20:55:58.949  INFO 21160 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : -------------doAfter-----------
+2020-04-28 20:55:58.949  INFO 21160 --- [http-nio-8081-exec-1] c.fred.blog.codenotes.aspect.LogAspect   : result : index
+2020-04-28 20:55:59.480  WARN 21160 --- [http-nio-8081-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2020-04-28 20:55:59.605  WARN 21160 --- [http-nio-8081-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /img/wechat.jpg
+2020-04-28 20:55:59.652  WARN 21160 --- [http-nio-8081-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /img/wechat.png

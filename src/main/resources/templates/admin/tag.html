@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MySpringBoot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.css">
+    <link rel="stylesheet" href="/css/me.css">
+</head>
+
+<body>
+
+<!--导航-->
+<nav class="ui inverted attached segment m-padding-tb-mini">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui orange header item">Fred's</h2>
+            <a href="/" class="m-item item m-mobile-hide"><i class="home icon "></i>博客</a>
+            <a href="/admin/index" class="m-item item m-mobile-hide"><i class="setting icon"></i>管理</a>
+            <a href="/admin/tag" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+            <div class="right menu">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img class="ui avatar image" src="https://picsum.photos/id/1025/100/100"><span
+                            th:text="${session.admin.getUsername()}"></span>
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="/admin/logout" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui lists black menu icon button m-right-top m-mobile-show">
+        <i class="bars icon"></i>
+    </a>
+</nav>
+
+
+<div class="ui  segment m-margin-top ui m-container-small">
+    <div class="ui secondary segment">
+        <div class="ui two column grid">
+            <div class="column">
+                <i class="tags icon"></i> 标签
+            </div>
+            <div class="right aligned column">
+                <a href="#" target="_blank">more <i class="angle double right icon"></i> </a>
+            </div>
+        </div>
+    </div>
+    <div class="ui basic segment">
+            <a th:href="@{/admin/rmTag/(id=${tags.id})}" th:each="tags : ${tags.list}" class="ui huge basic orange label m-margin-box m-text-thin">
+                <t th:text="${tags.name}"></t>
+                <i class="delete icon"></i> </a>
+    </div>
+    <div class="ui m-container m-padding-tb-big">
+        <div class="ui basic orange segment">
+            <form action="/admin/addTag" method="post">
+                <div class="ui m-margin-top-small huge icon input">
+                    <input type="text" name="tag" placeholder="在此添加标签">
+                    <i class="tag icon"></i>
+                </div>
+                <button type="submit" class="ui m-margin-top-small huge right floated green button">添加</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

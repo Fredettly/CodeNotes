@@ -1,0 +1,24 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fred.blog.codenotes.mapper.TagMapper">
+    <resultMap type="com.fred.blog.codenotes.model.Tag" id="tagmap">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+    </resultMap>
+    <!--查询所有标签-->
+    <select id="findAllTag" resultMap="tagmap">
+		select * from tag
+	</select>
+
+    <!--添加标签-->
+    <insert id="addTag">
+        insert into tag set name = #{tagName}
+    </insert>
+
+    <!--根据ID移除标签-->
+    <delete id="removeTagById">
+        delete from tag where id = #{id}
+    </delete>
+</mapper>
