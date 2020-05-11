@@ -996,3 +996,9 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/admi
 
 2020-05-11 12:15:11.815  INFO 24727 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-05-11 12:15:11.852  INFO 24727 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-05-11 12:29:12.384  INFO 24950 --- [main] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication v0.0.1-SNAPSHOT on iZwz95t3cs8g5k9pwhlf7cZ with PID 24950 (/root/App/CodeNotes/CodeNotes/target/codenotes-0.0.1-SNAPSHOT.jar started by root in /root/App/CodeNotes/CodeNotes)
+2020-05-11 12:29:12.413  INFO 24950 --- [main] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: pro
+2020-05-11 12:29:17.769  WARN 24950 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-11 12:29:22.007  INFO 24950 --- [main] c.f.blog.codenotes.CodenotesApplication  : Started CodenotesApplication in 11.028 seconds (JVM running for 12.058)
+2020-05-11 12:29:47.687 ERROR 24950 --- [http-nio-80-exec-10] c.f.b.c.c.client.AuthorizeController     : callback get github error,null
+2020-05-11 12:29:52.908 ERROR 24950 --- [http-nio-80-exec-6] c.f.b.c.c.client.AuthorizeController     : callback get github error,null
