@@ -408,3 +408,87 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'gi
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
 	... 81 common frames omitted
 
+2020-05-11 09:37:26.927  INFO 23673 --- [main] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication v0.0.1-SNAPSHOT on iZwz95t3cs8g5k9pwhlf7cZ with PID 23673 (/root/App/CodeNotes/CodeNotes/target/codenotes-0.0.1-SNAPSHOT.jar started by root in /root/App/CodeNotes/CodeNotes)
+2020-05-11 09:37:26.933  INFO 23673 --- [main] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: pro
+2020-05-11 09:37:28.567  WARN 23673 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.fred.Blog.codenotes.mapper]' package. Please check your configuration.
+2020-05-11 09:37:28.947  WARN 23673 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.fred.blog.codenotes]' package. Please check your configuration.
+2020-05-11 09:37:32.190  WARN 23673 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-11 09:37:32.393  WARN 23673 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tagServiceImpl': Unsatisfied dependency expressed through field 'tagMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.fred.blog.codenotes.mapper.TagMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-05-11 09:37:32.549  WARN 23673 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2020-05-11 09:37:33.007 ERROR 23673 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field tagMapper in com.fred.blog.codenotes.service.TagServiceImpl required a bean of type 'com.fred.blog.codenotes.mapper.TagMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.fred.blog.codenotes.mapper.TagMapper' in your configuration.
+
+2020-05-11 09:45:42.387  INFO 23772 --- [main] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication v0.0.1-SNAPSHOT on iZwz95t3cs8g5k9pwhlf7cZ with PID 23772 (/root/App/CodeNotes/CodeNotes/target/codenotes-0.0.1-SNAPSHOT.jar started by root in /root/App/CodeNotes/CodeNotes)
+2020-05-11 09:45:42.393  INFO 23772 --- [main] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: pro
+2020-05-11 09:45:44.108  WARN 23772 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.fred.Blog.codenotes.mapper]' package. Please check your configuration.
+2020-05-11 09:45:44.440  WARN 23772 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.fred.blog.codenotes]' package. Please check your configuration.
+2020-05-11 09:45:47.824  WARN 23772 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-11 09:45:47.972  WARN 23772 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tagServiceImpl': Unsatisfied dependency expressed through field 'tagMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.fred.blog.codenotes.mapper.TagMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-05-11 09:45:48.155  WARN 23772 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2020-05-11 09:45:48.639 ERROR 23772 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field tagMapper in com.fred.blog.codenotes.service.TagServiceImpl required a bean of type 'com.fred.blog.codenotes.mapper.TagMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.fred.blog.codenotes.mapper.TagMapper' in your configuration.
+
+2020-05-11 09:48:30.416  INFO 23850 --- [main] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication v0.0.1-SNAPSHOT on iZwz95t3cs8g5k9pwhlf7cZ with PID 23850 (/root/App/CodeNotes/CodeNotes/target/codenotes-0.0.1-SNAPSHOT.jar started by root in /root/App/CodeNotes/CodeNotes)
+2020-05-11 09:48:30.423  INFO 23850 --- [main] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: pro
+2020-05-11 09:48:31.797  WARN 23850 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.fred.Blog.codenotes.mapper]' package. Please check your configuration.
+2020-05-11 09:48:32.301  WARN 23850 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.fred.blog.codenotes]' package. Please check your configuration.
+2020-05-11 09:48:35.378  WARN 23850 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-11 09:48:35.575  WARN 23850 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tagServiceImpl': Unsatisfied dependency expressed through field 'tagMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.fred.blog.codenotes.mapper.TagMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-05-11 09:48:35.775  WARN 23850 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2020-05-11 09:48:36.327 ERROR 23850 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field tagMapper in com.fred.blog.codenotes.service.TagServiceImpl required a bean of type 'com.fred.blog.codenotes.mapper.TagMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.fred.blog.codenotes.mapper.TagMapper' in your configuration.
+
