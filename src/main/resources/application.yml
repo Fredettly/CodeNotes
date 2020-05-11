@@ -2,13 +2,13 @@ spring:
   thymeleaf:
     mode: HTML
   profiles:
-    active: pro
+    active: dev
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 github:
   client:
     id: "7768e7e66f0af96f2ca4"
     secret: "e1c115a50917e221104ddc0e368b268f92ce4345"
-  redirect_uri: "http://localhost:8080/callback"
+  redirect_uri: "http://8.129.167.17/callback"
 pagehelper:
     helperDialect: mysql
