@@ -108,3 +108,136 @@
 2020-05-11 10:56:23.078 DEBUG 27280 --- [http-nio-8080-exec-7] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
 2020-05-11 10:56:23.078 DEBUG 27280 --- [http-nio-8080-exec-7] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
 2020-05-11 10:56:23.080 DEBUG 27280 --- [http-nio-8080-exec-7] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 6
+2020-05-11 12:36:43.209  INFO 10912 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication on DESKTOP-ST4N7N4 with PID 10912 (C:\Project\JavaProject\codenotes\target\classes started by xwx_ in C:\Project\JavaProject\codenotes)
+2020-05-11 12:36:43.211 DEBUG 10912 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-05-11 12:36:43.212  INFO 10912 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: dev
+2020-05-11 12:36:43.475  INFO 10912 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-11 12:36:43.476  INFO 10912 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-11 12:36:43.581  WARN 10912 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-11 12:36:48.324  INFO 10912 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-11 12:36:48.353  INFO 10912 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-11 12:36:48.355  INFO 10912 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-11 12:36:48.606  INFO 10912 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-11 12:36:48.607  INFO 10912 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5129 ms
+2020-05-11 12:36:50.491  INFO 10912 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-11 12:36:50.781  INFO 10912 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-11 12:36:51.933  INFO 10912 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-11 12:36:52.024  INFO 10912 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-11 12:36:52.032  INFO 10912 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Started CodenotesApplication in 10.502 seconds (JVM running for 13.457)
+2020-05-11 12:36:57.769  INFO 10912 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-11 12:36:57.771  INFO 10912 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-11 12:36:57.821  INFO 10912 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 48 ms
+2020-05-11 12:36:58.160  INFO 10912 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-05-11 12:36:58.403 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM blog 
+2020-05-11 12:36:58.489 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==> Parameters: 
+2020-05-11 12:36:58.592 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : <==      Total: 1
+2020-05-11 12:36:58.636 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==>  Preparing: SELECT * FROM blog order by gmt_modified desc LIMIT ? 
+2020-05-11 12:36:58.664 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==> Parameters: 4(Integer)
+2020-05-11 12:36:58.679 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : <==      Total: 4
+2020-05-11 12:36:58.735 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:36:58.736 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:36:58.861 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:36:58.874 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:36:58.875 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:36:58.883 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:36:58.959 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:36:58.960 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:36:58.966 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:36:58.967 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:36:58.967 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:36:58.977 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:36:58.985 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-11 12:36:58.986 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-11 12:36:58.989 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-11 12:36:58.990 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-11 12:36:58.991 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-11 12:36:58.993 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 6
+2020-05-11 12:37:15.039 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.m.U.findByUsernameAndPassword    : ==>  Preparing: select * from admin where username = ? and password = ?; 
+2020-05-11 12:37:15.043 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.m.U.findByUsernameAndPassword    : ==> Parameters: admin(String), d6bf4bb9a66419380a7e8b034270d381(String)
+2020-05-11 12:37:15.045 DEBUG 10912 --- [http-nio-8080-exec-1] c.f.b.c.m.U.findByUsernameAndPassword    : <==      Total: 1
+2020-05-11 12:37:15.099 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM blog 
+2020-05-11 12:37:15.102 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==> Parameters: 
+2020-05-11 12:37:15.108 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : <==      Total: 1
+2020-05-11 12:37:15.110 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==>  Preparing: SELECT * FROM blog order by gmt_modified desc LIMIT ? 
+2020-05-11 12:37:15.111 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==> Parameters: 4(Integer)
+2020-05-11 12:37:15.123 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.findAllBlog    : <==      Total: 4
+2020-05-11 12:37:15.125 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:37:15.126 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:37:15.128 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:37:15.130 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:37:15.131 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:37:15.134 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:37:15.136 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:37:15.137 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:37:15.141 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:37:15.143 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:37:15.144 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:37:15.146 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:37:15.149 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-11 12:37:15.150 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-11 12:37:15.153 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-11 12:37:15.154 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-11 12:37:15.160 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-11 12:37:15.162 DEBUG 10912 --- [http-nio-8080-exec-3] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 6
+2020-05-11 12:37:21.016 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.mapper.BlogMapper.getById        : ==>  Preparing: select * from blog where id = ? 
+2020-05-11 12:37:21.019 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.mapper.BlogMapper.getById        : ==> Parameters: 13(Long)
+2020-05-11 12:37:21.022 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.mapper.BlogMapper.getById        : <==      Total: 1
+2020-05-11 12:37:21.029 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:37:21.030 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:37:21.034 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:37:21.044 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-11 12:37:21.045 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-11 12:37:21.047 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-11 12:37:21.049 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-11 12:37:21.051 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-11 12:37:21.055 DEBUG 10912 --- [http-nio-8080-exec-6] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 6
+2020-05-11 12:37:44.055 DEBUG 10912 --- [http-nio-8080-exec-5] c.f.b.c.mapper.BlogMapper.updateBlog     : ==>  Preparing: update blog set title=?,content=?,tag=?,gmt_modified=? where id=? 
+2020-05-11 12:37:44.057 DEBUG 10912 --- [http-nio-8080-exec-5] c.f.b.c.mapper.BlogMapper.updateBlog     : ==> Parameters: 我的第一条发布(String), 冲冲冲(String), Spring Boot(String), 1589171864054(Long), 13(Long)
+2020-05-11 12:37:44.071 DEBUG 10912 --- [http-nio-8080-exec-5] c.f.b.c.mapper.BlogMapper.updateBlog     : <==    Updates: 1
+2020-05-11 12:37:44.097 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM blog 
+2020-05-11 12:37:44.097 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==> Parameters: 
+2020-05-11 12:37:44.099 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : <==      Total: 1
+2020-05-11 12:37:44.100 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==>  Preparing: SELECT * FROM blog order by gmt_modified desc LIMIT ? 
+2020-05-11 12:37:44.101 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==> Parameters: 4(Integer)
+2020-05-11 12:37:44.106 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.BlogMapper.findAllBlog    : <==      Total: 4
+2020-05-11 12:37:44.107 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:37:44.107 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:37:44.109 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:37:44.110 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:37:44.111 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:37:44.113 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:37:44.117 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:37:44.117 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:37:44.121 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:37:44.122 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-11 12:37:44.157 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-11 12:37:44.159 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-11 12:37:44.162 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-11 12:37:44.162 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-11 12:37:44.163 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-11 12:37:44.164 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-11 12:37:44.165 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-11 12:37:44.166 DEBUG 10912 --- [http-nio-8080-exec-2] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 6
+2020-05-11 12:40:02.385  INFO 24980 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication on DESKTOP-ST4N7N4 with PID 24980 (C:\Project\JavaProject\codenotes\target\classes started by xwx_ in C:\Project\JavaProject\codenotes)
+2020-05-11 12:40:02.387 DEBUG 24980 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-05-11 12:40:02.388  INFO 24980 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: dev
+2020-05-11 12:40:02.448  WARN 24980 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-11 12:40:02.517  INFO 24980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-11 12:40:02.517  INFO 24980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-11 12:40:06.144  INFO 24980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-11 12:40:06.168  INFO 24980 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-11 12:40:06.169  INFO 24980 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-11 12:40:06.341  INFO 24980 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-11 12:40:06.341  INFO 24980 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3824 ms
+2020-05-11 12:40:08.192  INFO 24980 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-11 12:40:08.433  INFO 24980 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-11 12:40:09.512  INFO 24980 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-11 12:40:09.626  INFO 24980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-11 12:40:09.633  INFO 24980 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Started CodenotesApplication in 8.873 seconds (JVM running for 12.413)
+2020-05-11 12:40:13.224  INFO 24980 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-11 12:40:13.225  INFO 24980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-11 12:40:13.250  INFO 24980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2020-05-11 12:40:19.129  INFO 24980 --- [http-nio-8080-exec-6] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-05-11 12:40:19.361 DEBUG 24980 --- [http-nio-8080-exec-6] c.f.b.c.m.U.findByUsernameAndPassword    : ==>  Preparing: select * from admin where username = ? and password = ?; 
+2020-05-11 12:40:19.394 DEBUG 24980 --- [http-nio-8080-exec-6] c.f.b.c.m.U.findByUsernameAndPassword    : ==> Parameters: admin(String), d6bf4bb9a66419380a7e8b034270d381(String)
+2020-05-11 12:40:19.427 DEBUG 24980 --- [http-nio-8080-exec-6] c.f.b.c.m.U.findByUsernameAndPassword    : <==      Total: 1
