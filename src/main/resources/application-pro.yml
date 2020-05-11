@@ -7,7 +7,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
 logging:
   level:
-    root: info
+    root: warn
     com.fred.blog.codenotes: info
   file:
     path: log/blog-pro.log

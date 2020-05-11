@@ -35,7 +35,7 @@ public class AdminBlogController {
         PageInfo<Tag> tags = tagService.tags();
         model.addAttribute("list", list);
         model.addAttribute("tags", tags);
-        return "/admin/index";
+        return "admin/index";
     }
 
     @GetMapping("blog/{id}/delete")

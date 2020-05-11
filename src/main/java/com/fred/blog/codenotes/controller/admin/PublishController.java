@@ -32,7 +32,7 @@ public class PublishController {
     public String inputPage(Model model) {
         PageInfo<Tag> tags = tagService.tags();
         model.addAttribute("tags", tags);
-        return "/admin/publish";
+        return "admin/publish";
     }
 
 
@@ -46,7 +46,7 @@ public class PublishController {
 
         PageInfo<Tag> tags = tagService.tags();
         model.addAttribute("tags", tags);
-        return "/admin/publish";
+        return "admin/publish";
     }
 
     @PostMapping("blog/publish")
