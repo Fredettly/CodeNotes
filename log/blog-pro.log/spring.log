@@ -408,3 +408,35 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'gi
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
 	... 81 common frames omitted
 
+2020-05-11 09:39:48.985  INFO 24088 --- [main] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication v0.0.1-SNAPSHOT on DESKTOP-ST4N7N4 with PID 24088 (C:\Project\JavaProject\codenotes\target\codenotes-0.0.1-SNAPSHOT.jar started by xwx_ in C:\Project\JavaProject\codenotes)
+2020-05-11 09:39:48.994  INFO 24088 --- [main] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: pro
+2020-05-11 09:39:49.364  WARN 24088 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-11 09:39:50.229  WARN 24088 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.fred.Blog.codenotes.mapper]' package. Please check your configuration.
+2020-05-11 09:39:50.551  WARN 24088 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.fred.blog.codenotes]' package. Please check your configuration.
+2020-05-11 09:39:53.435  WARN 24088 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminBlogController': Unsatisfied dependency expressed through field 'blogService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogServiceImpl': Unsatisfied dependency expressed through field 'blogMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.fred.blog.codenotes.mapper.BlogMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-05-11 09:39:53.545  WARN 24088 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2020-05-11 09:39:53.958 ERROR 24088 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field blogMapper in com.fred.blog.codenotes.service.BlogServiceImpl required a bean of type 'com.fred.blog.codenotes.mapper.BlogMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.fred.blog.codenotes.mapper.BlogMapper' in your configuration.
+
+2020-05-11 09:41:36.028  INFO 26136 --- [main] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication v0.0.1-SNAPSHOT on DESKTOP-ST4N7N4 with PID 26136 (C:\Project\JavaProject\codenotes\target\codenotes-0.0.1-SNAPSHOT.jar started by xwx_ in C:\Project\JavaProject\codenotes)
+2020-05-11 09:41:36.034  INFO 26136 --- [main] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: pro
+2020-05-11 09:41:36.571  WARN 26136 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-11 09:41:43.187  INFO 26136 --- [main] c.f.blog.codenotes.CodenotesApplication  : Started CodenotesApplication in 8.729 seconds (JVM running for 9.624)
