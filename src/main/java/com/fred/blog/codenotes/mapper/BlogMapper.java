@@ -2,6 +2,7 @@ package com.fred.blog.codenotes.mapper;
 
 import com.fred.blog.codenotes.dto.BlogDTO;
 import com.fred.blog.codenotes.model.Blog;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -19,9 +20,11 @@ public interface BlogMapper {
 
     void updateBlog(Blog blog);
 
-    List<BlogDTO> findByTag(String tag);
+    List<BlogDTO> findByTag(@Param("tag") String tag);
 
     void incView(Blog blog);
 
     void incCommentCount(Blog blog);
+
+    Integer countBlog();
 }

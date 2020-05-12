@@ -63,16 +63,14 @@
                         <textarea style="display:none;" id="content" name="content" th:text="${content}">
                         </textarea>
                     </div>
-                    <div class="field">
-                        <h3>标签</h3>
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="tag">
-                            <i class="dropdown icon"></i>
-                            <div class="default text" th:if="${tag!=null}" th:text="${tag}">选择标签</div>
-                            <div class="menu">
-                                <div class="item" th:each="t : ${tags.list}" th:text="${t.name}"
-                                     th:data-value="${t.name}"></div>
-                            </div>
+                    <div class="ui form">
+                        <div class="field">
+                            <label>标签</label>
+                            <select multiple="" class="ui dropdown" name="tag">
+                                <option value="" th:if="${tag==null}">选择标签</option>
+                                <option th:if="${tag!=null}" th:text="${tag}"  th:value="${tag}"></option>
+                                <option th:each="t : ${tags.list}" th:text="${t.name}" th:value="${t.name}"></option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -134,9 +132,6 @@
     var itemText1 = $("#ddl").find("option:selected").text();
     console.log('' + itemText1);
 
-    $(function () {
-        $("#demo").mySelect();
-    });
 
     $(function () {
         var editor = editormd("test-editor", {

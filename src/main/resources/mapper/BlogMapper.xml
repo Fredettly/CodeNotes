@@ -30,7 +30,7 @@
 
     <!--根据标签查询博客-->
     <select id="findByTag" resultMap="blogdtomap">
-        select * from blog where tag = #{tag}
+        select * from blog where tag like concat('%',#{tag},'%')
     </select>
 
     <!--根据id查询博客-->
@@ -62,4 +62,9 @@
     <update id="incCommentCount">
         update blog set comment_count = comment_count + #{commentCount} where id = #{id}
     </update>
+
+    <!--总博客数-->
+    <select id="countBlog" resultType="java.lang.Integer">
+        select count(1) from blog
+    </select>
 </mapper>
