@@ -72,10 +72,10 @@
             <!--博客内容-->
             <div class="eleven wide column">
                 <!--header-->
-                <div class="ui top segment">
+                <div class="ui top segment" style="border-radius: 15px; height: 5em;">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
-                            <h3 class="ui header m-black"><i class="quote left icon"></i> 博客</h3>
+                            <h1 class="ui header m-black"><i class="quote left icon"></i> 博客</h1>
                         </div>
                         <div class="right aligned  column">
                             共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${list.total}">
@@ -83,8 +83,31 @@
                         </div>
                     </div>
                 </div>
+                <!--search-->
+                <div class="ui basic segment">
+                    <div class="ui form">
+                        <form action="/">
+                            <div class="ui middle aligned two column grid">
+                                <div class=" field column">
+                                    <select multiple="" class="ui dropdown" name="tag">
+                                        <option value="">选择标签</option>
+                                        <option th:each="tag : ${tag.list}" th:text="${tag.name}"
+                                                th:value="${tag.name}"></option>
+                                    </select>
+                                </div>
+                                <div class="right aligned  column">
+                                    <button type="submit" class="ui right floated blue button"><i
+                                            class="search icon"></i>搜索
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                 <!--content-->
-                <div class="ui segment rounded m-margin-bottom" th:each="list : ${list.list}">
+                <div class="ui segment rounded m-margin-bottom" style="border-radius: 20px;"
+                     th:each="list : ${list.list}">
                     <div class="ui padded vertical segment">
                         <div class="ui stackable grid">
                             <div class="eleven wide column">
@@ -126,12 +149,12 @@
                 <tr>
                     <th colspan="5">
                         <div class="ui right floated pagination menu" th:each="p : ${list}">
-                            <a class="icon item" th:if="${p.hasPreviousPage}" th:href="@{/(pageNum=${p.prePage})}">
+                            <a class="icon item" th:if="${p.hasPreviousPage}" th:href="@{~/(pageNum=${p.prePage})}">
                                 <i class="left chevron icon"></i>
                             </a>
-                            <a class="item" th:href="@{/(pageNum=${pages})}" th:each="pages : ${list.navigatepageNums}"
+                            <a class="item" th:href="@{~/(pageNum=${pages})}" th:each="pages : ${list.navigatepageNums}"
                                th:text="${pages}">1</a>
-                            <a class="icon item" th:if="${p.hasNextPage}" th:href="@{/(pageNum=${p.nextPage})}">
+                            <a class="icon item" th:if="${p.hasNextPage}" th:href="@{~/(pageNum=${p.nextPage})}">
                                 <i class="right chevron icon"></i>
                             </a>
                         </div>
