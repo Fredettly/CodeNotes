@@ -112,7 +112,7 @@
                     <div class="content">
                         <a class="author" th:text="${c.githubUser.name}">Matt</a>
                         <div class="metadata">
-                            <span class="date" th:text="${#dates.format(c.gmtCreate,'yyyy-MM-dd')}">今天下午 5:42</span>
+                            <span class="date" th:datetime="${list.gmtModified}">今天下午 5:42</span>
                         </div>
                         <div class="text" th:text="${c.content}">太赞了！</div>
                         <div class="actions">
@@ -200,6 +200,12 @@
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.js"></script>
 <script src="/editormd/editormd.min.js"></script>
 <script src="/js/me.js"></script>
-
+<script>
+    $('.ui.dropdown').dropdown({
+        on: 'hover'
+    });
+    var timeagoInstance = timeago();
+    timeagoInstance.render(document.querySelectorAll('.time'), 'zh_CN');
+</script>
 </body>
 </html>
