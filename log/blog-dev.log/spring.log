@@ -5175,3 +5175,598 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 2020-05-13 20:43:30.566 DEBUG 28640 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
 2020-05-13 20:43:30.566 DEBUG 28640 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
 2020-05-13 20:43:30.568 DEBUG 28640 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:09:43.655  INFO 28200 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication on DESKTOP-ST4N7N4 with PID 28200 (C:\Project\JavaProject\codenotes\target\classes started by xwx_ in C:\Project\JavaProject\codenotes)
+2020-05-13 21:09:43.657 DEBUG 28200 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-05-13 21:09:43.658  INFO 28200 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: dev
+2020-05-13 21:09:43.895  INFO 28200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-13 21:09:43.896  INFO 28200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-13 21:09:43.961  WARN 28200 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-13 21:09:47.709  INFO 28200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-13 21:09:47.750  INFO 28200 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-13 21:09:47.751  INFO 28200 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-13 21:09:48.022  INFO 28200 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-13 21:09:48.023  INFO 28200 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4126 ms
+2020-05-13 21:09:50.295  INFO 28200 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-13 21:09:50.525  INFO 28200 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-13 21:09:51.576  INFO 28200 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-13 21:09:51.674  INFO 28200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-13 21:09:51.681  INFO 28200 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Started CodenotesApplication in 9.461 seconds (JVM running for 11.574)
+2020-05-13 21:09:57.482  INFO 28200 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-13 21:09:57.483  INFO 28200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-13 21:09:57.536  INFO 28200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 43 ms
+2020-05-13 21:09:58.044  INFO 28200 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-05-13 21:09:58.405 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM blog 
+2020-05-13 21:09:58.450 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==> Parameters: 
+2020-05-13 21:09:58.483 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : <==      Total: 1
+2020-05-13 21:09:58.492 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==>  Preparing: SELECT * FROM blog order by gmt_modified desc LIMIT ? 
+2020-05-13 21:09:58.494 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==> Parameters: 4(Integer)
+2020-05-13 21:09:58.508 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : <==      Total: 4
+2020-05-13 21:09:58.514 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:09:58.514 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:09:58.517 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:09:58.528 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:09:58.529 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:09:58.532 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:09:58.533 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:09:58.534 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:09:58.538 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:09:58.539 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:09:58.540 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:09:58.542 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:09:58.546 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:09:58.546 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:09:58.549 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:09:58.550 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:09:58.551 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:09:58.555 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:09:58.559 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.countBlog      : ==>  Preparing: select count(1) from blog 
+2020-05-13 21:09:58.559 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.countBlog      : ==> Parameters: 
+2020-05-13 21:09:58.562 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.countBlog      : <==      Total: 1
+2020-05-13 21:10:02.734 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.getById        : ==>  Preparing: select * from blog where id = ? 
+2020-05-13 21:10:02.735 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.getById        : ==> Parameters: 14(Long)
+2020-05-13 21:10:02.737 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.getById        : <==      Total: 1
+2020-05-13 21:10:02.741 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:02.742 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:02.745 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:02.782 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.C.findByBlogId_COUNT           : ==>  Preparing: SELECT count(0) FROM comment WHERE parent_id = ? 
+2020-05-13 21:10:02.783 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.C.findByBlogId_COUNT           : ==> Parameters: 14(Long)
+2020-05-13 21:10:02.785 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.C.findByBlogId_COUNT           : <==      Total: 1
+2020-05-13 21:10:02.786 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:10:02.787 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:10:02.789 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:10:02.790 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:10:02.791 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:10:02.794 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:10:02.795 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.incView        : ==>  Preparing: update blog set view_count = view_count + ? where id = ? 
+2020-05-13 21:10:02.796 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.incView        : ==> Parameters: 1(Integer), 14(Long)
+2020-05-13 21:10:02.806 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.incView        : <==    Updates: 1
+2020-05-13 21:10:06.963 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM blog 
+2020-05-13 21:10:06.970 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==> Parameters: 
+2020-05-13 21:10:06.972 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : <==      Total: 1
+2020-05-13 21:10:06.975 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==>  Preparing: SELECT * FROM blog order by gmt_modified desc LIMIT ? 
+2020-05-13 21:10:06.977 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==> Parameters: 4(Integer)
+2020-05-13 21:10:06.982 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : <==      Total: 4
+2020-05-13 21:10:06.985 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:06.986 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:06.988 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:06.989 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:06.991 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:06.993 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:06.996 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:06.997 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:06.999 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:07.002 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:07.004 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:07.011 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:07.013 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:10:07.014 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:10:07.021 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:10:07.022 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:10:07.023 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:10:07.031 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:10:07.033 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.countBlog      : ==>  Preparing: select count(1) from blog 
+2020-05-13 21:10:07.034 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.countBlog      : ==> Parameters: 
+2020-05-13 21:10:07.035 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.countBlog      : <==      Total: 1
+2020-05-13 21:10:09.357 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.getById        : ==>  Preparing: select * from blog where id = ? 
+2020-05-13 21:10:09.360 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.getById        : ==> Parameters: 12(Long)
+2020-05-13 21:10:09.363 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.getById        : <==      Total: 1
+2020-05-13 21:10:09.364 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:09.369 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:09.371 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:09.373 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.C.findByBlogId_COUNT           : ==>  Preparing: SELECT count(0) FROM comment WHERE parent_id = ? 
+2020-05-13 21:10:09.373 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.C.findByBlogId_COUNT           : ==> Parameters: 12(Long)
+2020-05-13 21:10:09.377 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.C.findByBlogId_COUNT           : <==      Total: 1
+2020-05-13 21:10:09.379 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:10:09.379 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:10:09.382 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:10:09.383 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:10:09.384 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:10:09.385 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:10:09.386 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.incView        : ==>  Preparing: update blog set view_count = view_count + ? where id = ? 
+2020-05-13 21:10:09.388 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.incView        : ==> Parameters: 1(Integer), 12(Long)
+2020-05-13 21:10:09.397 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.incView        : <==    Updates: 1
+2020-05-13 21:10:13.290 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM blog 
+2020-05-13 21:10:13.291 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==> Parameters: 
+2020-05-13 21:10:13.294 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : <==      Total: 1
+2020-05-13 21:10:13.296 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==>  Preparing: SELECT * FROM blog order by gmt_modified desc LIMIT ? 
+2020-05-13 21:10:13.296 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==> Parameters: 4(Integer)
+2020-05-13 21:10:13.300 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.BlogMapper.findAllBlog    : <==      Total: 4
+2020-05-13 21:10:13.303 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:13.305 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:13.306 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:13.308 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:13.309 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:13.312 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:13.314 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:13.315 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:13.316 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:13.317 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:13.318 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:13.319 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:13.321 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:10:13.321 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:10:13.322 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:10:13.322 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:10:13.323 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:10:13.325 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:10:13.326 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.BlogMapper.countBlog      : ==>  Preparing: select count(1) from blog 
+2020-05-13 21:10:13.327 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.BlogMapper.countBlog      : ==> Parameters: 
+2020-05-13 21:10:13.328 DEBUG 28200 --- [http-nio-8080-exec-5] c.f.b.c.mapper.BlogMapper.countBlog      : <==      Total: 1
+2020-05-13 21:10:22.718 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM blog 
+2020-05-13 21:10:22.719 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==> Parameters: 
+2020-05-13 21:10:22.721 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : <==      Total: 1
+2020-05-13 21:10:22.724 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==>  Preparing: SELECT * FROM blog order by gmt_modified desc LIMIT ?, ? 
+2020-05-13 21:10:22.726 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==> Parameters: 4(Integer), 4(Integer)
+2020-05-13 21:10:22.736 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.BlogMapper.findAllBlog    : <==      Total: 4
+2020-05-13 21:10:22.737 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:22.738 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:22.739 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:22.741 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:22.741 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:22.745 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:22.751 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:22.752 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:22.755 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:22.756 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:22.756 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:22.760 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:22.763 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:10:22.766 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:10:22.773 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:10:22.774 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:10:22.775 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:10:22.777 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:10:22.777 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.BlogMapper.countBlog      : ==>  Preparing: select count(1) from blog 
+2020-05-13 21:10:22.778 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.BlogMapper.countBlog      : ==> Parameters: 
+2020-05-13 21:10:22.779 DEBUG 28200 --- [http-nio-8080-exec-7] c.f.b.c.mapper.BlogMapper.countBlog      : <==      Total: 1
+2020-05-13 21:10:26.290 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM blog 
+2020-05-13 21:10:26.291 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==> Parameters: 
+2020-05-13 21:10:26.292 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : <==      Total: 1
+2020-05-13 21:10:26.292 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==>  Preparing: SELECT * FROM blog order by gmt_modified desc LIMIT ?, ? 
+2020-05-13 21:10:26.293 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==> Parameters: 8(Integer), 4(Integer)
+2020-05-13 21:10:26.296 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.BlogMapper.findAllBlog    : <==      Total: 3
+2020-05-13 21:10:26.297 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:26.297 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:26.302 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:26.304 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:26.304 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:26.306 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:26.307 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:26.307 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:26.309 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:26.316 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:10:26.317 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:10:26.319 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:10:26.320 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:10:26.321 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:10:26.338 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:10:26.339 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.BlogMapper.countBlog      : ==>  Preparing: select count(1) from blog 
+2020-05-13 21:10:26.339 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.BlogMapper.countBlog      : ==> Parameters: 
+2020-05-13 21:10:26.340 DEBUG 28200 --- [http-nio-8080-exec-4] c.f.b.c.mapper.BlogMapper.countBlog      : <==      Total: 1
+2020-05-13 21:10:30.419 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.getById        : ==>  Preparing: select * from blog where id = ? 
+2020-05-13 21:10:30.420 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.getById        : ==> Parameters: 4(Long)
+2020-05-13 21:10:30.422 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.getById        : <==      Total: 1
+2020-05-13 21:10:30.423 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:10:30.424 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:10:30.428 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:10:30.430 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.C.findByBlogId_COUNT           : ==>  Preparing: SELECT count(0) FROM comment WHERE parent_id = ? 
+2020-05-13 21:10:30.431 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.C.findByBlogId_COUNT           : ==> Parameters: 4(Long)
+2020-05-13 21:10:30.435 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.C.findByBlogId_COUNT           : <==      Total: 1
+2020-05-13 21:10:30.438 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.CommentMapper.findByBlogId     : ==>  Preparing: SELECT * FROM comment WHERE parent_id = ? order by gmt_create desc LIMIT ? 
+2020-05-13 21:10:30.438 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.CommentMapper.findByBlogId     : ==> Parameters: 4(Long), 5(Integer)
+2020-05-13 21:10:30.443 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.CommentMapper.findByBlogId     : <==      Total: 2
+2020-05-13 21:10:30.444 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.UserMapper.findGithubById      : ==>  Preparing: select * from github_user where id=? 
+2020-05-13 21:10:30.445 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.UserMapper.findGithubById      : ==> Parameters: 1(Long)
+2020-05-13 21:10:30.454 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.UserMapper.findGithubById      : <==      Total: 1
+2020-05-13 21:10:30.463 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.UserMapper.findGithubById      : ==>  Preparing: select * from github_user where id=? 
+2020-05-13 21:10:30.463 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.UserMapper.findGithubById      : ==> Parameters: 1(Long)
+2020-05-13 21:10:30.464 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.UserMapper.findGithubById      : <==      Total: 1
+2020-05-13 21:10:30.466 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:10:30.467 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:10:30.473 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:10:30.473 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:10:30.474 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:10:30.477 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:10:30.478 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.incView        : ==>  Preparing: update blog set view_count = view_count + ? where id = ? 
+2020-05-13 21:10:30.479 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.incView        : ==> Parameters: 1(Integer), 4(Long)
+2020-05-13 21:10:30.482 DEBUG 28200 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.incView        : <==    Updates: 1
+2020-05-13 21:10:30.530 ERROR 28200 --- [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "blog": An error happened during template parsing (template: "class path resource [templates/blog.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_73]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_73]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_73]
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "c.gmtModified" (template: "blog" - line 115, col 47)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "c.gmtModified" (template: "blog" - line 115, col 47)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	... 50 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'gmtModified' cannot be found on object of type 'com.fred.blog.codenotes.dto.CommentDTO' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:330) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	... 75 common frames omitted
+
+2020-05-13 21:10:30.539 ERROR 28200 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'gmtModified' cannot be found on object of type 'com.fred.blog.codenotes.dto.CommentDTO' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:330) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_73]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_73]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_73]
+
+2020-05-13 21:11:36.803 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.getById        : ==>  Preparing: select * from blog where id = ? 
+2020-05-13 21:11:36.804 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.getById        : ==> Parameters: 4(Long)
+2020-05-13 21:11:36.806 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.getById        : <==      Total: 1
+2020-05-13 21:11:36.808 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:11:36.809 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:11:36.810 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:11:36.812 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.C.findByBlogId_COUNT           : ==>  Preparing: SELECT count(0) FROM comment WHERE parent_id = ? 
+2020-05-13 21:11:36.813 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.C.findByBlogId_COUNT           : ==> Parameters: 4(Long)
+2020-05-13 21:11:36.816 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.C.findByBlogId_COUNT           : <==      Total: 1
+2020-05-13 21:11:36.819 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.CommentMapper.findByBlogId     : ==>  Preparing: SELECT * FROM comment WHERE parent_id = ? order by gmt_create desc LIMIT ? 
+2020-05-13 21:11:36.819 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.CommentMapper.findByBlogId     : ==> Parameters: 4(Long), 5(Integer)
+2020-05-13 21:11:36.821 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.CommentMapper.findByBlogId     : <==      Total: 2
+2020-05-13 21:11:36.822 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.UserMapper.findGithubById      : ==>  Preparing: select * from github_user where id=? 
+2020-05-13 21:11:36.823 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.UserMapper.findGithubById      : ==> Parameters: 1(Long)
+2020-05-13 21:11:36.824 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.UserMapper.findGithubById      : <==      Total: 1
+2020-05-13 21:11:36.836 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.UserMapper.findGithubById      : ==>  Preparing: select * from github_user where id=? 
+2020-05-13 21:11:36.836 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.UserMapper.findGithubById      : ==> Parameters: 1(Long)
+2020-05-13 21:11:36.838 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.UserMapper.findGithubById      : <==      Total: 1
+2020-05-13 21:11:36.839 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:11:36.840 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:11:36.841 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:11:36.841 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:11:36.842 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:11:36.844 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:11:36.844 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.incView        : ==>  Preparing: update blog set view_count = view_count + ? where id = ? 
+2020-05-13 21:11:36.845 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.incView        : ==> Parameters: 1(Integer), 4(Long)
+2020-05-13 21:11:36.853 DEBUG 28200 --- [http-nio-8080-exec-9] c.f.b.c.mapper.BlogMapper.incView        : <==    Updates: 1
+2020-05-13 21:11:43.009 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.getById        : ==>  Preparing: select * from blog where id = ? 
+2020-05-13 21:11:43.011 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.getById        : ==> Parameters: 4(Long)
+2020-05-13 21:11:43.013 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.getById        : <==      Total: 1
+2020-05-13 21:11:43.014 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:11:43.014 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:11:43.016 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:11:43.022 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.C.findByBlogId_COUNT           : ==>  Preparing: SELECT count(0) FROM comment WHERE parent_id = ? 
+2020-05-13 21:11:43.023 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.C.findByBlogId_COUNT           : ==> Parameters: 4(Long)
+2020-05-13 21:11:43.024 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.C.findByBlogId_COUNT           : <==      Total: 1
+2020-05-13 21:11:43.025 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.CommentMapper.findByBlogId     : ==>  Preparing: SELECT * FROM comment WHERE parent_id = ? order by gmt_create desc LIMIT ? 
+2020-05-13 21:11:43.026 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.CommentMapper.findByBlogId     : ==> Parameters: 4(Long), 5(Integer)
+2020-05-13 21:11:43.028 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.CommentMapper.findByBlogId     : <==      Total: 2
+2020-05-13 21:11:43.029 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.UserMapper.findGithubById      : ==>  Preparing: select * from github_user where id=? 
+2020-05-13 21:11:43.029 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.UserMapper.findGithubById      : ==> Parameters: 1(Long)
+2020-05-13 21:11:43.031 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.UserMapper.findGithubById      : <==      Total: 1
+2020-05-13 21:11:43.032 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.UserMapper.findGithubById      : ==>  Preparing: select * from github_user where id=? 
+2020-05-13 21:11:43.032 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.UserMapper.findGithubById      : ==> Parameters: 1(Long)
+2020-05-13 21:11:43.037 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.UserMapper.findGithubById      : <==      Total: 1
+2020-05-13 21:11:43.039 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:11:43.040 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:11:43.041 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:11:43.042 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:11:43.043 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:11:43.045 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:11:43.045 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.incView        : ==>  Preparing: update blog set view_count = view_count + ? where id = ? 
+2020-05-13 21:11:43.046 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.incView        : ==> Parameters: 1(Integer), 4(Long)
+2020-05-13 21:11:43.055 DEBUG 28200 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.incView        : <==    Updates: 1
+2020-05-13 21:11:56.680 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM blog 
+2020-05-13 21:11:56.681 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==> Parameters: 
+2020-05-13 21:11:56.684 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : <==      Total: 1
+2020-05-13 21:11:56.685 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==>  Preparing: SELECT * FROM blog order by gmt_modified desc LIMIT ? 
+2020-05-13 21:11:56.693 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==> Parameters: 4(Integer)
+2020-05-13 21:11:56.695 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.findAllBlog    : <==      Total: 4
+2020-05-13 21:11:56.696 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:11:56.696 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:11:56.698 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:11:56.700 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:11:56.700 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:11:56.701 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:11:56.702 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:11:56.703 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:11:56.704 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:11:56.705 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:11:56.705 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:11:56.709 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:11:56.711 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:11:56.711 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:11:56.713 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:11:56.713 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:11:56.714 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:11:56.715 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:11:56.716 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.countBlog      : ==>  Preparing: select count(1) from blog 
+2020-05-13 21:11:56.717 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.countBlog      : ==> Parameters: 
+2020-05-13 21:11:56.718 DEBUG 28200 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.countBlog      : <==      Total: 1
+2020-05-13 21:16:31.032  INFO 22196 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Starting CodenotesApplication on DESKTOP-ST4N7N4 with PID 22196 (C:\Project\JavaProject\codenotes\target\classes started by xwx_ in C:\Project\JavaProject\codenotes)
+2020-05-13 21:16:31.035 DEBUG 22196 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-05-13 21:16:31.035  INFO 22196 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : The following profiles are active: dev
+2020-05-13 21:16:31.261  INFO 22196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-13 21:16:31.263  INFO 22196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-13 21:16:31.421  WARN 22196 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-13 21:16:34.762  INFO 22196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-13 21:16:34.782  INFO 22196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-13 21:16:34.783  INFO 22196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-13 21:16:34.976  INFO 22196 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-13 21:16:34.978  INFO 22196 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3715 ms
+2020-05-13 21:16:36.572  INFO 22196 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-13 21:16:36.812  INFO 22196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-13 21:16:37.743  INFO 22196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-13 21:16:37.839  INFO 22196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-13 21:16:37.848  INFO 22196 --- [restartedMain] c.f.blog.codenotes.CodenotesApplication  : Started CodenotesApplication in 8.37 seconds (JVM running for 10.572)
+2020-05-13 21:16:45.448  INFO 22196 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-13 21:16:45.449  INFO 22196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-13 21:16:45.491  INFO 22196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 41 ms
+2020-05-13 21:16:45.961  INFO 22196 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-05-13 21:16:46.312 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM blog 
+2020-05-13 21:16:46.366 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==> Parameters: 
+2020-05-13 21:16:46.406 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : <==      Total: 1
+2020-05-13 21:16:46.417 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==>  Preparing: SELECT * FROM blog order by gmt_modified desc LIMIT ? 
+2020-05-13 21:16:46.425 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==> Parameters: 4(Integer)
+2020-05-13 21:16:46.432 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.findAllBlog    : <==      Total: 4
+2020-05-13 21:16:46.441 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:16:46.442 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:16:46.444 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:16:46.457 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:16:46.457 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:16:46.459 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:16:46.461 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:16:46.462 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:16:46.465 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:16:46.466 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:16:46.467 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:16:46.470 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:16:46.472 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:16:46.472 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:16:46.474 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:16:46.484 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:16:46.487 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:16:46.489 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:16:46.491 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.countBlog      : ==>  Preparing: select count(1) from blog 
+2020-05-13 21:16:46.491 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.countBlog      : ==> Parameters: 
+2020-05-13 21:16:46.493 DEBUG 22196 --- [http-nio-8080-exec-1] c.f.b.c.mapper.BlogMapper.countBlog      : <==      Total: 1
+2020-05-13 21:16:52.187 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.getById        : ==>  Preparing: select * from blog where id = ? 
+2020-05-13 21:16:52.190 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.getById        : ==> Parameters: 14(Long)
+2020-05-13 21:16:52.195 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.getById        : <==      Total: 1
+2020-05-13 21:16:52.197 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:16:52.197 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:16:52.199 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:16:52.231 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.C.findByBlogId_COUNT           : ==>  Preparing: SELECT count(0) FROM comment WHERE parent_id = ? 
+2020-05-13 21:16:52.231 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.C.findByBlogId_COUNT           : ==> Parameters: 14(Long)
+2020-05-13 21:16:52.232 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.C.findByBlogId_COUNT           : <==      Total: 1
+2020-05-13 21:16:52.234 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:16:52.234 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:16:52.236 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:16:52.236 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:16:52.237 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:16:52.243 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:16:52.245 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.incView        : ==>  Preparing: update blog set view_count = view_count + ? where id = ? 
+2020-05-13 21:16:52.247 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.incView        : ==> Parameters: 1(Integer), 14(Long)
+2020-05-13 21:16:52.257 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.incView        : <==    Updates: 1
+2020-05-13 21:16:57.955 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM blog 
+2020-05-13 21:16:57.962 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : ==> Parameters: 
+2020-05-13 21:16:57.964 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.m.BlogMapper.findAllBlog_COUNT   : <==      Total: 1
+2020-05-13 21:16:57.966 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==>  Preparing: SELECT * FROM blog order by gmt_modified desc LIMIT ?, ? 
+2020-05-13 21:16:57.967 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.findAllBlog    : ==> Parameters: 8(Integer), 4(Integer)
+2020-05-13 21:16:57.972 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.findAllBlog    : <==      Total: 3
+2020-05-13 21:16:57.977 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:16:57.978 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:16:57.982 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:16:57.983 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:16:57.984 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:16:57.986 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:16:57.987 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:16:57.992 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:16:57.995 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:16:57.999 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:16:57.999 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:16:58.000 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:16:58.001 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:16:58.002 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:16:58.006 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:16:58.008 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.countBlog      : ==>  Preparing: select count(1) from blog 
+2020-05-13 21:16:58.009 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.countBlog      : ==> Parameters: 
+2020-05-13 21:16:58.010 DEBUG 22196 --- [http-nio-8080-exec-3] c.f.b.c.mapper.BlogMapper.countBlog      : <==      Total: 1
+2020-05-13 21:17:01.665 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.getById        : ==>  Preparing: select * from blog where id = ? 
+2020-05-13 21:17:01.666 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.getById        : ==> Parameters: 4(Long)
+2020-05-13 21:17:01.668 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.getById        : <==      Total: 1
+2020-05-13 21:17:01.674 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==>  Preparing: select * from admin where id = ? 
+2020-05-13 21:17:01.674 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : ==> Parameters: 1(Long)
+2020-05-13 21:17:01.678 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.UserMapper.findById       : <==      Total: 1
+2020-05-13 21:17:01.681 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.C.findByBlogId_COUNT           : ==>  Preparing: SELECT count(0) FROM comment WHERE parent_id = ? 
+2020-05-13 21:17:01.682 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.C.findByBlogId_COUNT           : ==> Parameters: 4(Long)
+2020-05-13 21:17:01.683 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.C.findByBlogId_COUNT           : <==      Total: 1
+2020-05-13 21:17:01.685 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.CommentMapper.findByBlogId     : ==>  Preparing: SELECT * FROM comment WHERE parent_id = ? order by gmt_create desc LIMIT ? 
+2020-05-13 21:17:01.686 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.CommentMapper.findByBlogId     : ==> Parameters: 4(Long), 5(Integer)
+2020-05-13 21:17:01.691 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.CommentMapper.findByBlogId     : <==      Total: 2
+2020-05-13 21:17:01.693 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.UserMapper.findGithubById      : ==>  Preparing: select * from github_user where id=? 
+2020-05-13 21:17:01.696 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.UserMapper.findGithubById      : ==> Parameters: 1(Long)
+2020-05-13 21:17:01.698 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.UserMapper.findGithubById      : <==      Total: 1
+2020-05-13 21:17:01.705 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.UserMapper.findGithubById      : ==>  Preparing: select * from github_user where id=? 
+2020-05-13 21:17:01.706 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.UserMapper.findGithubById      : ==> Parameters: 1(Long)
+2020-05-13 21:17:01.710 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.UserMapper.findGithubById      : <==      Total: 1
+2020-05-13 21:17:01.718 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==>  Preparing: SELECT count(0) FROM tag 
+2020-05-13 21:17:01.726 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : ==> Parameters: 
+2020-05-13 21:17:01.728 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.m.TagMapper.findAllTag_COUNT     : <==      Total: 1
+2020-05-13 21:17:01.729 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : ==>  Preparing: select * from tag LIMIT ? 
+2020-05-13 21:17:01.729 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : ==> Parameters: 100(Integer)
+2020-05-13 21:17:01.735 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.TagMapper.findAllTag      : <==      Total: 7
+2020-05-13 21:17:01.736 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.incView        : ==>  Preparing: update blog set view_count = view_count + ? where id = ? 
+2020-05-13 21:17:01.737 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.incView        : ==> Parameters: 1(Integer), 4(Long)
+2020-05-13 21:17:01.745 DEBUG 22196 --- [http-nio-8080-exec-8] c.f.b.c.mapper.BlogMapper.incView        : <==    Updates: 1
