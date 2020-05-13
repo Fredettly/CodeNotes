@@ -19,7 +19,7 @@
             <h2 class="ui orange header item">Fred's</h2>
             <a href="/" class="m-item item m-mobile-hide"><i class="home icon "></i>博客</a>
             <a href="/admin/index" class="m-item item m-mobile-hide"><i class="setting icon"></i>管理</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+            <a href="/admin/tag" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
             <div class="right menu">
                 <div class="ui dropdown item">
                     <div class="text">
@@ -68,7 +68,6 @@
                             <label>标签</label>
                             <select multiple="" class="ui dropdown" name="tag">
                                 <option value="" th:if="${tag==null}">选择标签</option>
-                                <option th:if="${tag!=null}" th:text="${tag}"  th:value="${tag}"></option>
                                 <option th:each="t : ${tags.list}" th:text="${t.name}" th:value="${t.name}"></option>
                             </select>
                         </div>
