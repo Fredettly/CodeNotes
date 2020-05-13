@@ -93,8 +93,7 @@
                                         罗志祥的时间管理，为什么你学不会？</h1>
                                 </a>
                                 <div class="ui basic segment">
-                                    <p class="ui basic orange label" th:text="${list.tag}">
-                                        今天有个朋友跟我开玩笑，你看罗志祥比你们忙那么多，还能「多人运动」，结果你们连打个游戏都要...</p>
+                                    <div class="ui orange basic label" th:each="tag : ${list.tag.split(',')}" th:text="${tag}">MySQL</div>
                                 </div>
                                 <div class="ui grid">
                                     <div class="ui  horizontal link list">
@@ -219,7 +218,7 @@
                     <div class="extra content">
                         <div class="ui statistics">
                             <div class="statistic">
-                                <div class="value" th:text="${list.total}">
+                                <div class="value" th:text="${blogNum}">
                                     5,550
                                 </div>
                                 <div class="label">博客</div>

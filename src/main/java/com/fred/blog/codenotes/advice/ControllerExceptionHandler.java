@@ -34,7 +34,7 @@ public class ControllerExceptionHandler {
             if (e instanceof CustomizeException) {
                 resultDTO = ResultDTO.errorOf((CustomizeException) e);
             } else {
-                resultDTO = ResultDTO.errorOf(CustomizeErrorCode.SYS_ERROR);
+                resultDTO = ResultDTO.errorOf(CustomizeErrorCode.REQUEST_FAILED);
             }
             try {
                 response.setContentType("application/json");

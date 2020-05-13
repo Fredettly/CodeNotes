@@ -86,7 +86,7 @@
             </div>
             <!--标签-->
             <div class="ui basic segment">
-                <div class="ui orange basic label" th:text="${blog.tag}">MySQL</div>
+                <div class="ui orange basic label" th:each="tag : ${blog.tag.split(',')}" th:text="${tag}">MySQL</div>
             </div>
             <div class="ui center aligned basic segment">
                 <button id="paybutton" class="ui red basic circular button">赞赏</button>
