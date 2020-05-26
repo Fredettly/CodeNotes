@@ -27,6 +27,7 @@ public class ControllerExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ModelAndView exceptionHandler(HttpServletRequest request, HttpServletResponse response, Model model, Throwable e) throws Exception {
+        logger.error("Requst URL : {}, Exception : {}", request.getRequestURL(), e);
         String contentType = request.getContentType();
         if ("application/json".equals(contentType)) {
             ResultDTO resultDTO;

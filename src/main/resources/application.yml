@@ -8,7 +8,10 @@ mybatis:
 github:
   client:
     id: "7768e7e66f0af96f2ca4"
-    secret: "e1c115a50917e221104ddc0e368b268f92ce4345"
-  redirect_uri: "http://8.129.167.17/callback"
+    secret: ENC(sRLVmUwej8VM+h7KuUrH60oYq/pE0d+SAJzkBYekGjG29Mr4BXa8wPr1W+HWxDTChvvO7KH4h9A=)
+  redirect_uri: "http://localhost:8080/callback"
 pagehelper:
     helperDialect: mysql
+jasypt:
+  encryptor:
+    password: codenotes
