@@ -27,7 +27,9 @@ public class CommentController {
     public Object postComment(@RequestBody Comment comment,
                               HttpServletRequest request) {
         GithubUser user = (GithubUser) request.getSession().getAttribute("user");
-        if (user == null) return ResultDTO.errorOf(CustomizeErrorCode.NO_LOGIN);
+        if (user == null) {
+            return ResultDTO.errorOf(CustomizeErrorCode.NO_LOGIN);
+        }
         if (comment.getContent() == null || comment.getContent().equals("")) {
             return ResultDTO.errorOf(CustomizeErrorCode.CONTENT_IS_EMPTY);
         }
