@@ -111,7 +111,7 @@
                     <div class="content">
                         <a class="author" th:text="${c.githubUser.name}">Matt</a>
                         <div class="metadata">
-                            <span class="time" th:datetime="${list.gmtModified}">今天下午 5:42</span>
+                            <span class="time" th:datetime="${c.gmtCreate}">今天下午 5:42</span>
                         </div>
                         <div class="text" th:text="${c.content}">太赞了！</div>
                         <div class="actions">
@@ -197,6 +197,7 @@
 <!--js-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.js"></script>
+<script src="https://cdn.bootcss.com/timeago.js/3.0.2/timeago.js"></script>
 <script src="/editormd/editormd.min.js"></script>
 <script src="/js/me.js"></script>
 <script>
