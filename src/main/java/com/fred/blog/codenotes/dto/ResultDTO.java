@@ -4,11 +4,13 @@ import com.fred.blog.codenotes.exception.CustomizeErrorCode;
 import com.fred.blog.codenotes.exception.CustomizeException;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * Created by xwx_ on 2020/5/6
  */
 @Data
-public class ResultDTO {
+public class ResultDTO implements Serializable {
     private Integer code;
     private String message;
 

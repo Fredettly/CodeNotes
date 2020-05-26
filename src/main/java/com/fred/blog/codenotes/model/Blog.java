@@ -2,12 +2,13 @@ package com.fred.blog.codenotes.model;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * Created by xwx_ on 2020/4/29
  */
 @Data
-
-public class Blog {
+public class Blog implements Serializable {
 
     private Long id;
     private String title;

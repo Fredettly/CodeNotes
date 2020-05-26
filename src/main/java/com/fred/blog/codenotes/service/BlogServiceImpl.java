@@ -47,8 +47,9 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public void saveOrUpdate(com.fred.blog.codenotes.model.Blog blog) {
-        if (blog.getId() == null) {
+    public void saveOrUpdate(Blog blog) {
+        Long id = blog.getId();
+        if (id == null) {
             //id不存在，添加
             blog.setGmtCreate(System.currentTimeMillis());
             blog.setGmtModified(System.currentTimeMillis());

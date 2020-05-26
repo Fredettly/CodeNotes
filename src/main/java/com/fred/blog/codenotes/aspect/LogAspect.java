@@ -21,7 +21,7 @@ public class LogAspect {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(* com.fred.blog.codenotes.controller.*.*(..))")
+    @Pointcut("execution(* com.fred.blog.codenotes.controller.admin.*.*(..))")
     public void log() {
     }
 
