@@ -1,20 +1,19 @@
 package com.fred.blog.codenotes.service;
 
 import com.fred.blog.codenotes.dto.BlogDTO;
+import com.fred.blog.codenotes.model.Blog;
 import com.github.pagehelper.PageInfo;
-
-import java.util.List;
 
 /**
  * Created by xwx_ on 2020/4/29
  */
 public interface BlogService {
 
-    PageInfo<BlogDTO> findAllBlog(Integer pageNum, String tag);
+    PageInfo<BlogDTO> findAllBlog(Integer pageNum, String search);
 
     void deleteBlogById(Long id);
 
-    void saveOrUpdate(com.fred.blog.codenotes.model.Blog blog);
+    void saveOrUpdate(Blog blog);
 
     BlogDTO getById(Long id);
 

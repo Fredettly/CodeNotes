@@ -25,12 +25,17 @@
     </resultMap>
     <!--查询所有博客-->
     <select id="findAllBlog" resultMap="blogdtomap">
-		select * from blog
+		select * from blog order by gmt_create desc
 	</select>
 
     <!--根据标签查询博客-->
     <select id="findByTag" resultMap="blogdtomap">
         select * from blog where tag like concat('%',#{tag},'%')
+    </select>
+
+    <!--根据条件查询博客-->
+    <select id="findBySearch" resultMap="blogdtomap">
+        select * from blog where title regexp #{search} order by gmt_create desc
     </select>
 
     <!--根据id查询博客-->

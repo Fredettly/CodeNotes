@@ -31,18 +31,18 @@
             <div class="right menu">
                 <div class="ui dropdown item">
                     <div class="text" th:if="${session.user == null}">
-                        <img class="ui avatar image" src="/img/github.jfif">
                         <a title="使用Github登录"
-                           href="https://github.com/login/oauth/authorize?client_id=7768e7e66f0af96f2ca4&redirect_uri=http://112.74.94.12/callback&scope=user&state=1">
+                           href="https://github.com/login/oauth/authorize?client_id=7768e7e66f0af96f2ca4&redirect_uri=http://112.74.94.12/callback">
+                            <img class="ui avatar image" src="/img/github.jfif">
                         </a>
                     </div>
                     <div class="text" th:if="${session.user != null}">
                         <img class="ui avatar image" th:src="${session.user.avatarUrl}">
                         <span th:text="${session.user.name}"></span>
+                        <i class="dropdown icon"></i>
                     </div>
-                    <i class="dropdown icon"></i>
                     <div class="menu" th:if="${session.user != null}">
-                        <a href="/logout" class="item">注销</a>
+                        <a href="/logout" class="item"><i class="power off icon"></i>注销</a>
                     </div>
                 </div>
             </div>

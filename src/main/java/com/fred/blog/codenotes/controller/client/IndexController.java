@@ -32,7 +32,8 @@ public class IndexController {
         PageInfo<BlogDTO> list = blogService.findAllBlog(pageNum, tag);
         PageInfo<Tag> tags = tagService.tags();
         Integer blogNum = blogMapper.countBlog();
-        model.addAttribute("tag", tags);
+        model.addAttribute("tags", tags);
+        model.addAttribute("tag", tag);
         model.addAttribute("list", list);
         model.addAttribute("blogNum", blogNum);
         return "index";
