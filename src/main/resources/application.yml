@@ -9,6 +9,10 @@ github:
   client:
     id: "7768e7e66f0af96f2ca4"
     secret: ENC(sRLVmUwej8VM+h7KuUrH60oYq/pE0d+SAJzkBYekGjG29Mr4BXa8wPr1W+HWxDTChvvO7KH4h9A=)
-  redirect_uri: "http://localhost:8080/callback"
+  redirect_uri: "http://112.74.94.12/callback"
 pagehelper:
+<<<<<<< HEAD
     helperDialect: mysql
+=======
+    helperDialect: mysql
+>>>>>>> 05aa3818f990d85aa29b2b3e15d1a555bb8e65c2
