@@ -35,6 +35,7 @@ public class AdminBlogController {
         PageInfo<Tag> tags = tagService.tags();
         model.addAttribute("list", list);
         model.addAttribute("tags", tags);
+        model.addAttribute("tag", tag);
         return "admin/index";
     }
 
