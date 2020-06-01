@@ -26,7 +26,8 @@
                     </div>
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <a href="/admin/logout" class="item">注销</a>
+                        <a th:href="@{/admin/blog/publish}" class="item"><i class="pencil icon"></i>写博客</a>
+                        <a href="/admin/logout" class="item"><i class="power off icon"></i>注销</a>
                     </div>
                 </div>
             </div>
@@ -42,19 +43,11 @@
         <form action="/admin/index" class="ui segment form">
             <div class="ui container">
                 <div class="field">
-                    <div class="ui selection dropdown">
-                        <input type="hidden" name="tag">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">标签</div>
-                        <div class="menu">
-                            <div th:each="tag : ${tags.list}" class="item" th:data-value="${tag.name}" th:text="${tag.name}">
-                                Java
-                            </div>
-                        </div>
+                    <div class="ui fluid action input">
+                        <input type="text" name="tag" autocomplete="off" placeholder="输入关键词...">
+                        <button type="submit" class="ui button">搜索</button>
                     </div>
                 </div>
-                <button type="submit" class="ui mini blue basic button"><i class="search icon"></i>搜索</button>
-                <a th:href="@{/admin/blog/publish}" class="ui right floated green button"><i class="pencil icon"></i> 发布</a>
             </div>
         </form>
         <div id="table-container">
@@ -86,11 +79,14 @@
                 <tr>
                     <th colspan="5">
                         <div class="ui right floated pagination menu" th:each="p : ${list}">
-                            <a class="icon item" th:if="${p.hasPreviousPage}" th:href="@{/admin/index(pageNum=${p.prePage})}">
+                            <a class="icon item" th:if="${p.hasPreviousPage}"
+                               th:href="@{/admin/index(pageNum=${p.prePage},(tag=${tag}))}">
                                 <i class="left chevron icon"></i>
                             </a>
-                            <a class="item" th:href="@{/admin/index(pageNum=${pages})}" th:each="pages : ${list.navigatepageNums}" th:text="${pages}">1</a>
-                            <a class="icon item" th:if="${p.hasNextPage}" th:href="@{/admin/index(pageNum=${p.nextPage})}">
+                            <a class="item" th:href="@{/admin/index(pageNum=${pages},(tag=${tag}))}"
+                               th:each="pages : ${list.navigatepageNums}" th:text="${pages}">1</a>
+                            <a class="icon item" th:if="${p.hasNextPage}"
+                               th:href="@{/admin/index(pageNum=${p.nextPage},(tag=${tag}))}">
                                 <i class="right chevron icon"></i>
                             </a>
                         </div>

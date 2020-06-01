@@ -26,7 +26,8 @@
                     </div>
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <a href="/admin/logout" class="item">注销</a>
+                        <a th:href="@{/admin/blog/publish}" class="item"><i class="pencil icon"></i>写博客</a>
+                        <a href="/admin/logout" class="item"><i class="power off icon"></i>注销</a>
                     </div>
                 </div>
             </div>
@@ -58,7 +59,7 @@
         <div class="ui basic orange segment">
             <form action="/admin/addTag" method="post">
                 <div class="ui m-margin-top-small huge icon input">
-                    <input type="text" name="tag" placeholder="在此添加标签">
+                    <input type="text" name="tag" autocomplete="off" placeholder="在此添加标签">
                     <i class="tag icon"></i>
                 </div>
                 <button type="submit" class="ui m-margin-top-small huge right floated green button">添加</button>

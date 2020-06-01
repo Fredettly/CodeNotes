@@ -12,6 +12,3 @@ github:
   redirect_uri: "http://localhost:8080/callback"
 pagehelper:
     helperDialect: mysql
-jasypt:
-  encryptor:
-    password: codenotes
