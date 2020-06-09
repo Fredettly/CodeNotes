@@ -29,14 +29,14 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public PageInfo<BlogDTO> findAllBlog(Integer pageNum, String tag) {
         if (tag == null || tag.equals("")) {
-            PageHelper.startPage(pageNum, 4, "gmt_modified desc");
+            PageHelper.startPage(pageNum, 5, "gmt_modified desc");
             List<BlogDTO> blogs = blogMapper.findAllBlog();
-            PageInfo<BlogDTO> pageInfo = new PageInfo<>(blogs);
+            PageInfo<BlogDTO> pageInfo = new PageInfo<>(blogs, 5);
             return packDTO(pageInfo);
         } else {
-            PageHelper.startPage(pageNum, 4, "gmt_modified desc");
+            PageHelper.startPage(pageNum, 5, "gmt_modified desc");
             List<BlogDTO> blogs = blogMapper.findByTag(tag);
-            PageInfo<BlogDTO> pageInfo = new PageInfo<>(blogs);
+            PageInfo<BlogDTO> pageInfo = new PageInfo<>(blogs, 5);
             return packDTO(pageInfo);
         }
     }

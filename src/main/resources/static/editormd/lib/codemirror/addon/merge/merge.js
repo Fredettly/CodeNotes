@@ -133,7 +133,7 @@
   }
 
   function syncScroll(dv, type) {
-    // Change advice will do a refresh after a timeout when diff is out of date
+    // Change handler will do a refresh after a timeout when diff is out of date
     if (dv.diffOutOfDate) return false;
     if (!dv.lockScroll) return true;
     var editor, other, now = +new Date;
