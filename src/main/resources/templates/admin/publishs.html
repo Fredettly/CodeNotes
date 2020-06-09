@@ -5,6 +5,8 @@
     <title>MySpringBoot</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/editormd/css/editormd.css">
     <link rel="stylesheet" href="/css/me.css">
 </head>
@@ -38,44 +40,56 @@
     </a>
 </nav>
 <!-- 中间内容 -->
-<div class="ui container m-padded-tb-big m-margin-bottom">
-    <br>
-    <form action="/admin/blog/publish" method="post" class="ui form">
-        <div class="ui basic segment">
-            <h1 th:if="${id != null}" th:text="更新博客"></i></h1>
-            <h1 th:if="${id == null}" th:text="新增博客"></i></h1>
-            <button type="submit" class="ui huge right floated green button"> 发布</button>
-        </div>
-        <div class="ui container">
-            <input type="hidden" name="id" th:value="${id}">
-            <div class="ui basic segment">
-                <h3>标题</h3>
-                <div class="ui basic segment">
-                    <div class="ui huge icon input" style="width: 30em!important;">
-                        <input type="text" name="title" th:value="${title}" autocomplete="off" placeholder="请输入标题">
-                        <i class="pencil icon"></i>
+<div class="contrainer-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <h2><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 发起</h2>
+            <hr>
+            <form action="/admin/blog/publish" method="post">
+                <input type="hidden" name="id" th:value="${id}">
+                <div class="form-group">
+                    <label for="title">问题标题</label>
+                    <input type="text" class="form-control" th:value="${title}" id="title"
+                           name="title"
+                           placeholder="问题标题">
+                </div>
+                <div class="form-group" id="test-editor">
+                    <label for="content">问题补充</label>
+                    <textarea name="content" id="content" th:text="${content}" class="form-control"
+                              placeholder="描述你的问题" style="display: none;"
+                              cols="30" rows="10"></textarea>
+                </div>
+                <div class="ui container">
+                    <div class="ui segment">
+                        <div class="field">
+                            <label>标签</label>
+                            <select multiple="" class="ui dropdown" name="tag">
+                                <option value="" th:if="${tag==null}">选择标签</option>
+                                <option th:each="t : ${tags.list}" th:text="${t.name}" th:value="${t.name}"></option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <h3>内容</h3>
-                    <div id="test-editor">
-                        <textarea style="display:none;" id="content" name="content" th:text="${content}">
-                        </textarea>
+                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                    <div class="alert alert-danger col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                         th:text="${error}"
+                         th:if="${error != null}">
                     </div>
-                    <div class="field">
-                        <label>标签</label>
-                        <select multiple="" class="ui dropdown" name="tag">
-                            <option value="" th:if="${tag==null}">选择标签</option>
-                            <option th:each="t : ${tags.list}" th:text="${t.name}" th:value="${t.name}"></option>
-                        </select>
-                    </div>
-            </div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                    <button type="submit" class="btn btn-success btn-publish">发布</button>
+                </div>
+            </form>
         </div>
-    </form>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <h3>问题发起指南</h3>
+            • 问题标题: 请用精简的语言描述您发布的问题，不超过25字 <br>
+            • 问题补充: 详细补充您的问题内容，并确保问题描述清晰直观, 并提供一些相关的资料<br>
+            • 选择标签: 选择一个或者多个合适的标签，用逗号隔开，每个标签不超过10个字<br>
+        </div>
+    </div>
 </div>
 
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -118,8 +132,8 @@
         <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2020 Fred's Power by xwx</p>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.js"></script>
+<script src="/js/jquery-3.4.1.js"></script>
 <script src="/editormd/editormd.js"></script>
 <script>
     $(function () {

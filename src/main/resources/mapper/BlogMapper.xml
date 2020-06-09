@@ -25,7 +25,7 @@
     </resultMap>
     <!--查询所有博客-->
     <select id="findAllBlog" resultMap="blogdtomap">
-		select * from blog order by gmt_create desc
+		select * from blog
 	</select>
 
     <!--根据标签查询博客-->

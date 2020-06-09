@@ -80,7 +80,7 @@
                     </div>
                 </div>
             </div>
-            <div class="m-container" id="blog-content">
+            <div class="m-container" id="test-markdown-view">
                 <textarea style="display: none;" th:text="${blog.content}"></textarea>
             </div>
             <!--标签-->
@@ -147,9 +147,20 @@
         </div>
     </div>
 </div>
-</div>
-</div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -198,9 +209,13 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.js"></script>
 <script src="https://cdn.bootcss.com/timeago.js/3.0.2/timeago.js"></script>
-<script src="/editormd/editormd.min.js"></script>
+<script src="/editormd/editormd.js"></script>
 <script src="/js/me.js"></script>
 <script>
+    $(function () {
+        var testView = editormd.markdownToHTML("test-markdown-view", {});
+    });
+
     $('.ui.dropdown').dropdown({
         on: 'hover'
     });
