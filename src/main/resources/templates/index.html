@@ -110,21 +110,19 @@
                      th:each="list : ${list.list}">
                     <div class="ui padded vertical segment">
                         <div class="ui stackable grid">
-                            <div class="eleven wide column">
+                            <div class="ten wide column">
                                 <a th:href="@{/blog/{id}(id=${list.id})}">
-                                    <h1 class="ui header m-black" th:data-value="${list.id}" th:text="${list.title}">
-                                        罗志祥的时间管理，为什么你学不会？</h1>
+                                    <h1 class="ui header m-black" th:data-value="${list.id}" th:text="${list.title}"></h1>
                                 </a>
                                 <div class="ui basic segment">
-                                    <div class="ui orange basic label" th:each="tag : ${list.tag.split(',')}" th:text="${tag}">MySQL</div>
+                                    <div class="ui orange basic label" th:each="tag : ${list.tag.split(',')}" th:text="${tag}"></div>
                                 </div>
                                 <div class="ui grid">
                                     <div class="ui  horizontal link list">
                                         <div class="item">
                                             <img th:src="${list.avatar}"
                                                  class="ui avatar image">
-                                            <div class="content"><a href="#" class="header m-text-thin"
-                                                                    th:text="${list.username}">飞翔的翔</a>
+                                            <div class="content"><a href="#" class="header m-text-thin" th:text="${list.username}"></a>
                                             </div>
                                         </div>
                                         <div class="item">
@@ -135,9 +133,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="four wide column">
-                                <a href="#" target="_blank">
-                                    <img th:src="${list.avatar}" class="ui rounded image">
+                            <div class="six wide column">
+                                <a href="#">
+                                    <img th:src="${list.image}" class="ui rounded image">
                                 </a>
                             </div>
                         </div>

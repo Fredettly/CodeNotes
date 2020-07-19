@@ -22,4 +22,5 @@ public class BlogDTO implements Serializable {
     private Long creator;
     private String username;
     private String avatar;
+    private String image;
 }
