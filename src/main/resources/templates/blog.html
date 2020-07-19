@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.css">
     <link rel="stylesheet" href="/editormd/css/editormd.css">
+    <link rel="stylesheet" href="/editormd/css/editormd.preview.css" />
     <link rel="stylesheet" href="/css/me.css">
-    <script src="/editormd/editormd.js"></script>
-    <script src="/editormd/lib/marked.min.js"></script>
-    <script src="/editormd/lib/prettify.min.js"></script>
 </head>
 <body>
 
@@ -80,7 +78,7 @@
                     </div>
                 </div>
             </div>
-            <div class="m-container" id="test-markdown-view">
+            <div class="m-container editormd-preview-theme-dark" id="test-markdown-view">
                 <textarea style="display: none;" th:text="${blog.content}"></textarea>
             </div>
             <!--标签-->
@@ -211,9 +209,14 @@
 <script src="https://cdn.bootcss.com/timeago.js/3.0.2/timeago.js"></script>
 <script src="/editormd/editormd.js"></script>
 <script src="/js/me.js"></script>
+<script src="/editormd/lib/marked.min.js"></script>
+<script src="/editormd/lib/prettify.min.js"></script>
 <script>
     $(function () {
-        var testView = editormd.markdownToHTML("test-markdown-view", {});
+        var testView = editormd.markdownToHTML("test-markdown-view", {
+            emoji: true,
+            previewTheme : "dark"
+        });
     });
 
     $('.ui.dropdown').dropdown({
