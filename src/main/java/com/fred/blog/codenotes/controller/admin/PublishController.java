@@ -41,6 +41,7 @@ public class PublishController {
         BlogDTO blogDTO = blogService.getById(id);
         model.addAttribute("title", blogDTO.getTitle());
         model.addAttribute("content", blogDTO.getContent());
+        model.addAttribute("image", blogDTO.getImage());
         model.addAttribute("tag", blogDTO.getTag());
         model.addAttribute("id", blogDTO.getId());
 
@@ -52,12 +53,14 @@ public class PublishController {
     @PostMapping("blog/publish")
     public String inputBlog(@RequestParam("title")String title,
                             @RequestParam("content")String content,
+                            @RequestParam("image")String image,
                             @RequestParam("tag")String tag,
                             @RequestParam("id")Long id,
                             HttpServletRequest request) {
         Blog blog = new Blog();
         blog.setTitle(title);
         blog.setContent(content);
+        blog.setImage(image);
         blog.setTag(tag);
         blog.setId(id);
         User admin = (User) request.getSession().getAttribute("admin");

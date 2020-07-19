@@ -53,8 +53,6 @@ public class BlogServiceImpl implements BlogService {
             //id不存在，添加
             blog.setGmtCreate(System.currentTimeMillis());
             blog.setGmtModified(System.currentTimeMillis());
-            blog.setViewCount(0);
-            blog.setCommentCount(0);
             blogMapper.saveBlog(blog);
         } else {
             //id存在，更新

@@ -19,4 +19,5 @@ public class Blog implements Serializable {
     private Integer commentCount;
     private String tag;
     private Long creator;
+    private String image;
 }

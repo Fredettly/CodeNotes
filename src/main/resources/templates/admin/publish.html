@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.4/dist/semantic.min.css">
     <link rel="stylesheet" href="/editormd/css/editormd.css">
+    <link rel="stylesheet" href="/editormd/css/editormd.preview.css" />
     <link rel="stylesheet" href="/css/me.css">
 </head>
 
@@ -62,7 +63,12 @@
                         </textarea>
                     </div>
                     <div class="field">
-                        <label>标签</label>
+                        <h3>封面图</h3>
+                        <input type="text" name="image" th:value="${image}" autocomplete="off" placeholder="请输入封面图片地址">
+                        <i class="image icon"></i>
+                    </div>
+                    <div class="field">
+                        <h3>标签</h3>
                         <select multiple="" class="ui dropdown" name="tag">
                             <option value="" th:if="${tag==null}">选择标签</option>
                             <option th:each="t : ${tags.list}" th:text="${t.name}" th:value="${t.name}"></option>
@@ -126,11 +132,14 @@
         var editor = editormd("test-editor", {
             height: 600,
             watch: false,
+            emoji: true,
             path: "/editormd/lib/",
             placeholder: "请输入问题描述",
             imageUpload: true,
             imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-            imageUploadURL: "/file/upload"
+            imageUploadURL: "/file/upload",
+            saveHTMLToTextarea : true,
+            previewTheme : "dark"
         });
     });
 

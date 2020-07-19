@@ -12,6 +12,7 @@
         <result column="view_count" property="viewCount"/>
         <result column="comment_count" property="commentCount"/>
         <result column="tag" property="tag"/>
+        <result column="image" property="image"/>
     </resultMap>
     <resultMap type="com.fred.blog.codenotes.model.Blog" id="blogmap">
         <id column="id" property="id"/>
@@ -22,6 +23,7 @@
         <result column="view_count" property="viewCount"/>
         <result column="comment_count" property="commentCount"/>
         <result column="tag" property="tag"/>
+        <result column="image" property="image"/>
     </resultMap>
     <!--查询所有博客-->
     <select id="findAllBlog" resultMap="blogdtomap">
@@ -50,12 +52,12 @@
 
     <!--新增博客-->
     <insert id="saveBlog" >
-        insert into blog (title, content, tag, gmt_create, gmt_modified, creator) values (#{title},#{content},#{tag},#{gmtCreate},#{gmtModified},#{creator})
+        insert into blog (title, content, tag, gmt_create, gmt_modified, creator, image) values (#{title},#{content},#{tag},#{gmtCreate},#{gmtModified},#{creator},#{image})
     </insert>
 
     <!--更新博客-->
     <update id="updateBlog">
-        update blog set title=#{title},content=#{content},tag=#{tag},gmt_modified=#{gmtModified} where id=#{id}
+        update blog set title=#{title},content=#{content},image=#{image},tag=#{tag},gmt_modified=#{gmtModified} where id=#{id}
     </update>
     
     <!--阅读数-->
@@ -70,6 +72,6 @@
 
     <!--总博客数-->
     <select id="countBlog" resultType="java.lang.Integer">
-        select count(1) from blog
+        select count(*) from blog
     </select>
 </mapper>
