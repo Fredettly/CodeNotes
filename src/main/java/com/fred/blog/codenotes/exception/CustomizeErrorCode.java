@@ -1,5 +1,6 @@
 package com.fred.blog.codenotes.exception;
 
+@SuppressWarnings("ALL")
 public enum CustomizeErrorCode implements ICustomizeErrorCode {
     BLOG_NOT_FOUND(2001, "博客不见了，换个试试~"),
     SYS_ERROR(2002, "服务器发烧了，隔离片刻再来~"),
