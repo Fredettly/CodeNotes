@@ -15,6 +15,3 @@ logging:
     max-history: 7
 server:
   port: 8080
-jasypt:
-  encryptor:
-    password: codenotes

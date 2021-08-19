@@ -17,3 +17,6 @@ qiniu:
   secret_token: ENC(D5UN62tamDB80vMas25J/FBSKXcPd2wvkem0ZunKputiiHDtiJ0Ft8mmwrMM5iegjKt7WY17THo=)
   bucket: "conotes"
   domain_of_bucket: "http://cdn.conotes.cn"
+jasypt:
+  encryptor:
+    password: codenotes
