@@ -2,7 +2,7 @@ spring:
   thymeleaf:
     mode: HTML
   profiles:
-    active: dev
+    active: pro
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 github:
@@ -14,6 +14,6 @@ pagehelper:
     helperDialect: mysql
 qiniu:
   access_token: "1ZeKAOLvjpBCvvMBxOLrWFf-vyCIYEuFdAaDIJ6t"
-  secret_token: ENC(D5UN62tamDB80vMas25J/FBSKXcPd2wvkem0ZunKputiiHDtiJ0Ft8mmwrMM5iegjKt7WY17THo=)
+  secret_token: "2nEYuPTdZMLe5yA6hWkscQ3DPfkqag1jUEsf0x1J"
   bucket: "conotes"
   domain_of_bucket: "http://cdn.conotes.cn"
