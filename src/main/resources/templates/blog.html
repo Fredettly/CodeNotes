@@ -30,7 +30,7 @@
                 <div class="ui dropdown item">
                     <div class="text" th:if="${session.user == null}">
                         <a title="使用Github登录"
-                           href="https://github.com/login/oauth/authorize?client_id=7768e7e66f0af96f2ca4&redirect_uri=http://192.168.0.187/callback">
+                           href="https://github.com/login/oauth/authorize?client_id=7768e7e66f0af96f2ca4&redirect_uri=http://www.conotes.cn/callback">
                             <img class="ui avatar image" src="/img/github.jfif">
                         </a>
                     </div>
@@ -200,7 +200,10 @@
             </div>
         </div>
         <div class="ui inverted section divider"></div>
-        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2020 Fred's Power by xwx</p>
+        <div class="ui inverted link list">
+            <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2020 Fred's Power by xwx</p>
+            <a href="#" class="item m-text-thin m-text-spaced m-opacity-mini">粤ICP备20045251号</a>
+        </div>
     </div>
 </footer>
 <!--js-->
